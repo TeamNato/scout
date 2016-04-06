@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (3.3.0)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
+  - DateTools (1.7.0)
+  - FontAwesome.swift (0.7.1)
+  - MBProgressHUD (0.9.2)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - DateTools
+  - FontAwesome.swift
+  - MBProgressHUD
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  FontAwesome.swift: 21ec9db57af8b92d4b4d6ca8208b9ae07031e828
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
