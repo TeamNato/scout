@@ -1,5 +1,7 @@
 # Scout
 
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=570535d3f7461501004bfaed&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/570535d3f7461501004bfaed/build/latest)
+
 A map-based app on iOS for the community to raise the awareness about society issues.
 
 Survey results: https://goo.gl/pYUVvC
