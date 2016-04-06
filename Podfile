@@ -10,6 +10,7 @@ target 'Scout' do
   pod 'MBProgressHUD'
   pod 'DateTools'
   pod 'FontAwesome.swift'
+  pod 'BuddyBuildSDK'
 end
 
 target 'ScoutTests' do

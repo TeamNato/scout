@@ -17,11 +17,13 @@ class Report: NSObject {
   var location: Location?
   var createdAt: NSDate!
   var modifiedAt: NSDate!
-
-  func reportedAnnonymously() -> Bool {
-    if let _ = reporter {
-      return true
+  
+  var reportedAnnonymously: Bool {
+    get {
+      if let _ = reporter {
+        return true
+      }
+      return false
     }
-    return false
   }
 }
