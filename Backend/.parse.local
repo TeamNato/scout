@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Scout": {
+      "applicationId": "JbZXUDgVViRXiw2FNP0kuAETrW9ZN7TfmHIzPIfU"
+    },
+    "_default": {
+      "link": "Scout"
+    }
+  }
+}
