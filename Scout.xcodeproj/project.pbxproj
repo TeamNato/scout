@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A1D1CB646570016604B /* WelcomeViewController.swift */; };
+		446C7A201CB646570016604B /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A1E1CB646570016604B /* WelcomeViewController.xib */; };
+		446C7A2F1CB6471C0016604B /* IssueFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */; };
+		446C7A301CB6471C0016604B /* IssueFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A2E1CB6471C0016604B /* IssueFilterViewController.xib */; };
+		446C7A331CB647530016604B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A311CB647530016604B /* MoreViewController.swift */; };
+		446C7A341CB647530016604B /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A321CB647530016604B /* MoreViewController.xib */; };
+		446C7A371CB647690016604B /* IssueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A351CB647690016604B /* IssueDetailsViewController.swift */; };
+		446C7A381CB647690016604B /* IssueDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A361CB647690016604B /* IssueDetailsViewController.xib */; };
+		446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A391CB647B40016604B /* IssueSubmitViewController.swift */; };
+		446C7A3C1CB647B40016604B /* IssueSubmitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */; };
+		446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A3D1CB647E40016604B /* ProfileHomeViewController.swift */; };
+		446C7A401CB647E40016604B /* ProfileHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */; };
+		446C7A431CB64B910016604B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A411CB64B910016604B /* LogInViewController.swift */; };
+		446C7A441CB64B910016604B /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A421CB64B910016604B /* LogInViewController.xib */; };
+		446C7A471CB64C760016604B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A451CB64C760016604B /* MainViewController.swift */; };
+		446C7A481CB64C760016604B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A461CB64C760016604B /* MainViewController.xib */; };
+		446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A491CB653300016604B /* IssueMainViewController.swift */; };
+		446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A4A1CB653300016604B /* IssueMainViewController.xib */; };
 		A283191BCE3F3A6C5190ABA5 /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */; };
 		B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DD1CB5702E002A5EF4 /* User.swift */; };
 		B81BF2E01CB570C0002A5EF4 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DF1CB570C0002A5EF4 /* Report.swift */; };
@@ -37,6 +55,24 @@
 		3B806A2413C21CD523FC4BAD /* Pods-Scout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scout/Pods-Scout.release.xcconfig"; sourceTree = "<group>"; };
 		40023A8315FA112F8E6DED64 /* Pods-Scout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scout/Pods-Scout.debug.xcconfig"; sourceTree = "<group>"; };
 		400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		446C7A1D1CB646570016604B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		446C7A1E1CB646570016604B /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueFilterViewController.swift; sourceTree = "<group>"; };
+		446C7A2E1CB6471C0016604B /* IssueFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueFilterViewController.xib; sourceTree = "<group>"; };
+		446C7A311CB647530016604B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		446C7A321CB647530016604B /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
+		446C7A351CB647690016604B /* IssueDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueDetailsViewController.swift; sourceTree = "<group>"; };
+		446C7A361CB647690016604B /* IssueDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueDetailsViewController.xib; sourceTree = "<group>"; };
+		446C7A391CB647B40016604B /* IssueSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueSubmitViewController.swift; sourceTree = "<group>"; };
+		446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueSubmitViewController.xib; sourceTree = "<group>"; };
+		446C7A3D1CB647E40016604B /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
+		446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHomeViewController.xib; sourceTree = "<group>"; };
+		446C7A411CB64B910016604B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		446C7A421CB64B910016604B /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		446C7A451CB64C760016604B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		446C7A461CB64C760016604B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		446C7A491CB653300016604B /* IssueMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueMainViewController.swift; sourceTree = "<group>"; };
+		446C7A4A1CB653300016604B /* IssueMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueMainViewController.xib; sourceTree = "<group>"; };
 		B81BF2DD1CB5702E002A5EF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		B81BF2DF1CB570C0002A5EF4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
 		B81BF2E11CB5711F002A5EF4 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
@@ -82,6 +118,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446C7A151CB614030016604B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				446C7A1D1CB646570016604B /* WelcomeViewController.swift */,
+				446C7A1E1CB646570016604B /* WelcomeViewController.xib */,
+				446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */,
+				446C7A2E1CB6471C0016604B /* IssueFilterViewController.xib */,
+				446C7A311CB647530016604B /* MoreViewController.swift */,
+				446C7A321CB647530016604B /* MoreViewController.xib */,
+				446C7A351CB647690016604B /* IssueDetailsViewController.swift */,
+				446C7A361CB647690016604B /* IssueDetailsViewController.xib */,
+				446C7A391CB647B40016604B /* IssueSubmitViewController.swift */,
+				446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */,
+				446C7A3D1CB647E40016604B /* ProfileHomeViewController.swift */,
+				446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */,
+				446C7A411CB64B910016604B /* LogInViewController.swift */,
+				446C7A421CB64B910016604B /* LogInViewController.xib */,
+				446C7A451CB64C760016604B /* MainViewController.swift */,
+				446C7A461CB64C760016604B /* MainViewController.xib */,
+				446C7A491CB653300016604B /* IssueMainViewController.swift */,
+				446C7A4A1CB653300016604B /* IssueMainViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		446C7A161CB6140B0016604B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		4471117489892864D16F97B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +210,8 @@
 		B8F119F11CB5696A004359DD /* Scout */ = {
 			isa = PBXGroup;
 			children = (
+				446C7A161CB6140B0016604B /* Views */,
+				446C7A151CB614030016604B /* ViewControllers */,
 				B81BF2DA1CB56FD7002A5EF4 /* Models */,
 				B8F119F21CB5696A004359DD /* AppDelegate.swift */,
 				B8F119F41CB5696A004359DD /* ViewController.swift */,
@@ -247,9 +317,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446C7A3C1CB647B40016604B /* IssueSubmitViewController.xib in Resources */,
+				446C7A481CB64C760016604B /* MainViewController.xib in Resources */,
 				B8F119FD1CB5696B004359DD /* LaunchScreen.storyboard in Resources */,
+				446C7A301CB6471C0016604B /* IssueFilterViewController.xib in Resources */,
+				446C7A201CB646570016604B /* WelcomeViewController.xib in Resources */,
+				446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */,
+				446C7A401CB647E40016604B /* ProfileHomeViewController.xib in Resources */,
 				B8F119FA1CB5696B004359DD /* Assets.xcassets in Resources */,
+				446C7A441CB64B910016604B /* LogInViewController.xib in Resources */,
+				446C7A341CB647530016604B /* MoreViewController.xib in Resources */,
 				B8F119F81CB5696B004359DD /* Main.storyboard in Resources */,
+				446C7A381CB647690016604B /* IssueDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,12 +394,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446C7A331CB647530016604B /* MoreViewController.swift in Sources */,
 				B8F119F51CB5696A004359DD /* ViewController.swift in Sources */,
+				446C7A431CB64B910016604B /* LogInViewController.swift in Sources */,
+				446C7A371CB647690016604B /* IssueDetailsViewController.swift in Sources */,
+				446C7A471CB64C760016604B /* MainViewController.swift in Sources */,
+				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
+				446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */,
+				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,
 				B8F119F31CB5696A004359DD /* AppDelegate.swift in Sources */,
 				B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */,
 				B851BEC81CB57C8D006CDE44 /* UserSettings.swift in Sources */,
 				B851BEC41CB57BB3006CDE44 /* Comment.swift in Sources */,
 				B851BEC61CB57BDD006CDE44 /* Location.swift in Sources */,
+				446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */,
+				446C7A2F1CB6471C0016604B /* IssueFilterViewController.swift in Sources */,
 				B81BF2E01CB570C0002A5EF4 /* Report.swift in Sources */,
 				B81BF2E21CB5711F002A5EF4 /* Photo.swift in Sources */,
 				B81BF2E41CB57263002A5EF4 /* Category.swift in Sources */,
