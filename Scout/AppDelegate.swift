@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     BuddyBuildSDK.setup()
     
     // Override point for customization after application launch.
+    let welcomeVC = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
+    window?.rootViewController = welcomeVC
     return true
   }
   
