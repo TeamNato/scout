@@ -11,6 +11,7 @@ target 'Scout' do
   pod 'DateTools'
   pod 'FontAwesome.swift'
   pod 'BuddyBuildSDK'
+  pod 'GoogleMaps'
 end
 
 target 'ScoutTests' do
