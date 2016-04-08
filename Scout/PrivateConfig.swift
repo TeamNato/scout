@@ -9,7 +9,7 @@
 import UIKit
 
 class PrivateConfig: NSObject {
-  static var GMSApiKey: String?
+  static var testKey: String?
 
   static func initConfig() -> Bool {
     let config = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("PrivateConfig", ofType: "plist")!)
@@ -17,7 +17,7 @@ class PrivateConfig: NSObject {
       return false
     }
     
-    GMSApiKey = config!["GMSApiKey"] as? String
+    testKey = config!["TestKey"] as? String
     return true
   }
 }
