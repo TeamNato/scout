@@ -6,5 +6,7 @@ echo "<?xml version='1.0' encoding='UTF-8'?>
 <dict>
     <key>TestKey</key>
     <string>$TEST_KEY</string>
+    <key>GMSApiKey</key>
+    <string>\$(GMSApiKey)</string>
 </dict>
 </plist>" > Scout/PrivateConfig.plist
