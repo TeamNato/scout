@@ -7,18 +7,21 @@
 //
 
 import UIKit
-
+import GoogleMaps
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    BuddyBuildSDK.setup()
     if !PrivateConfig.initConfig() {
       print("PrivateConfig.plist is missing.")
       return false
     }
+     
+    BuddyBuildSDK.setup()
+    GMSServices.provideAPIKey(PrivateConfig.GMSApiKey!)
+    
     
     // Override point for customization after application launch.
     let welcomeVC = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
