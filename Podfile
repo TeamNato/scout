@@ -3,6 +3,10 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
+def shared_pods
+  pod 'GoogleMaps'
+end
+
 target 'Scout' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
@@ -11,9 +15,10 @@ target 'Scout' do
   pod 'DateTools'
   pod 'FontAwesome.swift'
   pod 'BuddyBuildSDK'
+  shared_pods
 end
 
 target 'ScoutTests' do
-
+  shared_pods
 end
 
