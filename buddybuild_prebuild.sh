@@ -12,3 +12,7 @@ echo "<?xml version='1.0' encoding='UTF-8'?>
     <string>$GMS_API_KEY</string>
 </dict>
 </plist>" > Scout/PrivateConfig.plist
+
+# This file will be reset by `pod install`. We need to reset it to keep the extra
+# settings we've added
+git reset HEAD Pods/Pods.xcodeproj/project.pbxproj
