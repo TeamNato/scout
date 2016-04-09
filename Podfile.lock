@@ -2,11 +2,29 @@ PODS:
   - Alamofire (3.3.1)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.7.0)
   - BuddyBuildSDK (1.0.6)
   - DateTools (1.7.0)
+  - FBSDKCoreKit (4.10.1):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.10.1):
+    - FBSDKCoreKit
   - FontAwesome.swift (0.7.1)
   - GoogleMaps (1.13.0)
   - MBProgressHUD (0.9.2)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+  - ParseFacebookUtilsV4 (1.11.1):
+    - Bolts/Tasks (>= 1.6)
+    - FBSDKCoreKit (~> 4.10)
+    - FBSDKLoginKit (~> 4.10)
+    - FBSDKTVOSKit (~> 4.10)
+    - Parse (~> 1.12)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -14,19 +32,28 @@ DEPENDENCIES:
   - AlamofireImage
   - BuddyBuildSDK
   - DateTools
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - FontAwesome.swift
   - GoogleMaps
   - MBProgressHUD
+  - Parse
+  - ParseFacebookUtilsV4
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   BuddyBuildSDK: f9923ef709e3cd48b1eb2489f082e91a467c47bc
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
+  FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   FontAwesome.swift: 21ec9db57af8b92d4b4d6ca8208b9ae07031e828
   GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

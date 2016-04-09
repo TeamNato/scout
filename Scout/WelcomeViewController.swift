@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ParseFacebookUtilsV4
 
 class WelcomeViewController: UIViewController {
   
@@ -17,8 +18,21 @@ class WelcomeViewController: UIViewController {
   }
   
   @IBAction func onLogInClicked(sender: UIButton) {
-    let logInVC = LogInViewController(nibName: "LogInViewController", bundle: nil)
-    dismissViewControllerAnimated(false, completion: nil)
-    presentViewController(logInVC, animated: true, completion: nil)
+    PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"]) { (user, error) in
+      if let error = error {
+        print(error.localizedDescription)
+        return
+      }
+      
+      if let currentUser = User.currentUser {
+        var vc: UIViewController?
+        if currentUser.phoneVerified {
+          vc = MainViewController(nibName: "MainViewController", bundle: nil)
+        } else {
+          vc = VerifyViewController(nibName: "VerifyViewController", bundle: nil)
+        }
+        self.presentViewController(vc!, animated: true, completion: nil)
+      }
+    }
   }
 }
