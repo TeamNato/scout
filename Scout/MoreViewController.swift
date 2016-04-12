@@ -15,4 +15,17 @@ class MoreViewController: UIViewController {
     
     // Do any additional setup after loading the view.
   }  
+  @IBAction func onLogOutTapped(sender: UIButton) {
+    User.currentUser = nil
+    PFUser.logOutInBackgroundWithBlock { (error) in
+      if let error = error {
+        print(error.localizedDescription)
+        return
+      }
+      
+      let vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
+      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+      appDelegate.window?.rootViewController = vc
+    }
+  }
 }

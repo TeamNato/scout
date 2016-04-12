@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44254DD61CB74F7800B384E3 /* PrivateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44254DD51CB74F7800B384E3 /* PrivateConfig.swift */; };
+		4459F1BB1CB8F77A005B47D2 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459F1B91CB8F77A005B47D2 /* VerifyViewController.swift */; };
+		4459F1BC1CB8F77B005B47D2 /* VerifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4459F1BA1CB8F77A005B47D2 /* VerifyViewController.xib */; };
 		446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A1D1CB646570016604B /* WelcomeViewController.swift */; };
 		446C7A201CB646570016604B /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A1E1CB646570016604B /* WelcomeViewController.xib */; };
 		446C7A2F1CB6471C0016604B /* IssueFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */; };
@@ -20,12 +22,11 @@
 		446C7A3C1CB647B40016604B /* IssueSubmitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */; };
 		446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A3D1CB647E40016604B /* ProfileHomeViewController.swift */; };
 		446C7A401CB647E40016604B /* ProfileHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */; };
-		446C7A431CB64B910016604B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A411CB64B910016604B /* LogInViewController.swift */; };
-		446C7A441CB64B910016604B /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A421CB64B910016604B /* LogInViewController.xib */; };
 		446C7A471CB64C760016604B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A451CB64C760016604B /* MainViewController.swift */; };
 		446C7A481CB64C760016604B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A461CB64C760016604B /* MainViewController.xib */; };
 		446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A491CB653300016604B /* IssueMainViewController.swift */; };
 		446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A4A1CB653300016604B /* IssueMainViewController.xib */; };
+		44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D9931C1CB7A6A500BB771C /* ParserClient.swift */; };
 		9B673EEB45A117FAF75B8A12 /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6DBC8A8EB79B3DD0C3DA10 /* Pods_ScoutTests.framework */; };
 		A283191BCE3F3A6C5190ABA5 /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */; };
 		B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DD1CB5702E002A5EF4 /* User.swift */; };
@@ -59,6 +60,8 @@
 		40023A8315FA112F8E6DED64 /* Pods-Scout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scout/Pods-Scout.debug.xcconfig"; sourceTree = "<group>"; };
 		400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44254DD51CB74F7800B384E3 /* PrivateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateConfig.swift; sourceTree = "<group>"; };
+		4459F1B91CB8F77A005B47D2 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		4459F1BA1CB8F77A005B47D2 /* VerifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyViewController.xib; sourceTree = "<group>"; };
 		446C7A1D1CB646570016604B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		446C7A1E1CB646570016604B /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueFilterViewController.swift; sourceTree = "<group>"; };
@@ -71,12 +74,11 @@
 		446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueSubmitViewController.xib; sourceTree = "<group>"; };
 		446C7A3D1CB647E40016604B /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
 		446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHomeViewController.xib; sourceTree = "<group>"; };
-		446C7A411CB64B910016604B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		446C7A421CB64B910016604B /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		446C7A451CB64C760016604B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		446C7A461CB64C760016604B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		446C7A491CB653300016604B /* IssueMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueMainViewController.swift; sourceTree = "<group>"; };
 		446C7A4A1CB653300016604B /* IssueMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueMainViewController.xib; sourceTree = "<group>"; };
+		44D9931C1CB7A6A500BB771C /* ParserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserClient.swift; sourceTree = "<group>"; };
 		45E2CB7BF6C25A06526CF36D /* Pods-ScoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutTests/Pods-ScoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B81BF2DD1CB5702E002A5EF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		B81BF2DF1CB570C0002A5EF4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
@@ -142,12 +144,12 @@
 				446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */,
 				446C7A3D1CB647E40016604B /* ProfileHomeViewController.swift */,
 				446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */,
-				446C7A411CB64B910016604B /* LogInViewController.swift */,
-				446C7A421CB64B910016604B /* LogInViewController.xib */,
 				446C7A451CB64C760016604B /* MainViewController.swift */,
 				446C7A461CB64C760016604B /* MainViewController.xib */,
 				446C7A491CB653300016604B /* IssueMainViewController.swift */,
 				446C7A4A1CB653300016604B /* IssueMainViewController.xib */,
+				4459F1B91CB8F77A005B47D2 /* VerifyViewController.swift */,
+				4459F1BA1CB8F77A005B47D2 /* VerifyViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -168,6 +170,14 @@
 				E146D6BFE68D8743B570B3A8 /* Pods-ScoutTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		44D9931B1CB7A68200BB771C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				44D9931C1CB7A6A500BB771C /* ParserClient.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A3B8396A2DAADB5544A650A0 /* Frameworks */ = {
@@ -223,6 +233,7 @@
 		B8F119F11CB5696A004359DD /* Scout */ = {
 			isa = PBXGroup;
 			children = (
+				44D9931B1CB7A68200BB771C /* Utils */,
 				446C7A161CB6140B0016604B /* Views */,
 				446C7A151CB614030016604B /* ViewControllers */,
 				B81BF2DA1CB56FD7002A5EF4 /* Models */,
@@ -335,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				446C7A3C1CB647B40016604B /* IssueSubmitViewController.xib in Resources */,
+				4459F1BC1CB8F77B005B47D2 /* VerifyViewController.xib in Resources */,
 				446C7A481CB64C760016604B /* MainViewController.xib in Resources */,
 				B8F119FD1CB5696B004359DD /* LaunchScreen.storyboard in Resources */,
 				B829CAB31CB7A951008CC54F /* PrivateConfig.plist in Resources */,
@@ -343,7 +355,6 @@
 				446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */,
 				446C7A401CB647E40016604B /* ProfileHomeViewController.xib in Resources */,
 				B8F119FA1CB5696B004359DD /* Assets.xcassets in Resources */,
-				446C7A441CB64B910016604B /* LogInViewController.xib in Resources */,
 				446C7A341CB647530016604B /* MoreViewController.xib in Resources */,
 				B8F119F81CB5696B004359DD /* Main.storyboard in Resources */,
 				446C7A381CB647690016604B /* IssueDetailsViewController.xib in Resources */,
@@ -459,9 +470,9 @@
 			files = (
 				446C7A331CB647530016604B /* MoreViewController.swift in Sources */,
 				B8F119F51CB5696A004359DD /* ViewController.swift in Sources */,
-				446C7A431CB64B910016604B /* LogInViewController.swift in Sources */,
 				446C7A371CB647690016604B /* IssueDetailsViewController.swift in Sources */,
 				446C7A471CB64C760016604B /* MainViewController.swift in Sources */,
+				44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */,
 				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
 				446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */,
 				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,
@@ -474,6 +485,7 @@
 				446C7A2F1CB6471C0016604B /* IssueFilterViewController.swift in Sources */,
 				B81BF2E01CB570C0002A5EF4 /* Report.swift in Sources */,
 				44254DD61CB74F7800B384E3 /* PrivateConfig.swift in Sources */,
+				4459F1BB1CB8F77A005B47D2 /* VerifyViewController.swift in Sources */,
 				B81BF2E21CB5711F002A5EF4 /* Photo.swift in Sources */,
 				B81BF2E41CB57263002A5EF4 /* Category.swift in Sources */,
 			);
@@ -521,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -566,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -605,6 +619,7 @@
 			baseConfigurationReference = 40023A8315FA112F8E6DED64 /* Pods-Scout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,6 +639,7 @@
 			baseConfigurationReference = 3B806A2413C21CD523FC4BAD /* Pods-Scout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

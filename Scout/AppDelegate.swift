@@ -18,15 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       print("PrivateConfig.plist is missing.")
       return false
     }
-     
+
     BuddyBuildSDK.setup()
     GMSServices.provideAPIKey(PrivateConfig.GMSApiKey!)
     
+    ParserClient.initialize(launchOptions)
     
-    // Override point for customization after application launch.
-    let welcomeVC = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
-    window?.rootViewController = welcomeVC
+    var vc: UIViewController
+    if User.currentUser != nil {
+      vc = MainViewController(nibName: "MainViewController", bundle: nil)
+    } else {
+      vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
+    }
+    
+    window?.rootViewController = vc
     return true
+  }
+  
+  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+    return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
   }
   
   func applicationWillResignActive(application: UIApplication) {
@@ -45,12 +55,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func applicationDidBecomeActive(application: UIApplication) {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    FBSDKAppEvents.activateApp()
   }
   
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-  
   
 }
 

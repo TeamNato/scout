@@ -10,6 +10,8 @@ import UIKit
 
 class PrivateConfig: NSObject {
   static var GMSApiKey: String?
+  static var parseApplicationId: String?
+  static var parseClientId: String?
 
   static func initConfig() -> Bool {
     let config = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("PrivateConfig", ofType: "plist")!)
@@ -18,6 +20,8 @@ class PrivateConfig: NSObject {
     }
     
     GMSApiKey = config!["GMSApiKey"] as? String
+    parseApplicationId = config!["ParseApplicationId"] as? String
+    parseClientId = config!["ParseClientId"] as? String
     return true
   }
 }
