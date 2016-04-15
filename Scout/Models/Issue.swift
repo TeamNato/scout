@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Issue: NSObject, ResponseJSONObjectSerializable {
+class Issue: NSObject {
   var id: String!
   var issueDescription: String?
   var reporter: User?
@@ -22,11 +22,6 @@ class Issue: NSObject, ResponseJSONObjectSerializable {
   var isAnonymous: Bool?
   
   static let sharedDateFormatter = Issue.dateFromatter()
-  
-  
-  
-  
-  
   required init?(json: JSON) {
     // Basic field
     self.id = json["objectId"].string
@@ -44,14 +39,8 @@ class Issue: NSObject, ResponseJSONObjectSerializable {
     }
     
   }
-  
-  
-  
-  
   required override init() {
-    
   }
-  
   class func dateFromatter() -> NSDateFormatter {
     let aDateFormatter = NSDateFormatter()
     aDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -59,6 +48,4 @@ class Issue: NSObject, ResponseJSONObjectSerializable {
     aDateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
     return aDateFormatter
   }
-  
-  
 }

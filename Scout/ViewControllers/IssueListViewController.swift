@@ -14,8 +14,6 @@ class IssueListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ScoutAPIManager.sharedInstance.printListIssue()
-      
-      
         // Do any additional setup after loading the view.
     }
 

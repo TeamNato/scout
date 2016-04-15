@@ -8,6 +8,9 @@ PODS:
   - Bolts/AppLinks (1.7.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.7.0)
+  - BRYXBanner (0.5.2):
+    - BRYXBanner/Core (= 0.5.2)
+  - BRYXBanner/Core (0.5.2)
   - BuddyBuildSDK (1.0.6)
   - DateTools (1.7.0)
   - FBSDKCoreKit (4.10.1):
@@ -30,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 3.3.1)
   - AlamofireImage (= 2.4.0)
+  - BRYXBanner
   - BuddyBuildSDK (= 1.0.6)
   - DateTools (= 1.7.0)
   - FBSDKCoreKit (= 4.10.1)
@@ -45,6 +49,7 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  BRYXBanner: 5f0911d52e0a77e088f7ea7ddcdebd02afb7828a
   BuddyBuildSDK: f9923ef709e3cd48b1eb2489f082e91a467c47bc
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
