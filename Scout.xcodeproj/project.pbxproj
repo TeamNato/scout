@@ -27,6 +27,10 @@
 		446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A491CB653300016604B /* IssueMainViewController.swift */; };
 		446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A4A1CB653300016604B /* IssueMainViewController.xib */; };
 		44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D9931C1CB7A6A500BB771C /* ParserClient.swift */; };
+		714869761CC09A300047BE86 /* ScoutAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869751CC09A300047BE86 /* ScoutAPIRouter.swift */; };
+		714869781CC09CC60047BE86 /* ScoutAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869771CC09CC60047BE86 /* ScoutAPIManager.swift */; };
+		7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869791CC0D2010047BE86 /* IssueListViewController.swift */; };
+		7148697C1CC0D2010047BE86 /* IssueListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7148697A1CC0D2010047BE86 /* IssueListViewController.xib */; };
 		9B673EEB45A117FAF75B8A12 /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6DBC8A8EB79B3DD0C3DA10 /* Pods_ScoutTests.framework */; };
 		A283191BCE3F3A6C5190ABA5 /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */; };
 		B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DD1CB5702E002A5EF4 /* User.swift */; };
@@ -79,6 +83,10 @@
 		446C7A4A1CB653300016604B /* IssueMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueMainViewController.xib; path = ViewControllers/Xibs/IssueMainViewController.xib; sourceTree = "<group>"; };
 		44D9931C1CB7A6A500BB771C /* ParserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParserClient.swift; path = Utils/ParserClient.swift; sourceTree = "<group>"; };
 		45E2CB7BF6C25A06526CF36D /* Pods-ScoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutTests/Pods-ScoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		714869751CC09A300047BE86 /* ScoutAPIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoutAPIRouter.swift; path = Utils/ScoutAPIRouter.swift; sourceTree = "<group>"; };
+		714869771CC09CC60047BE86 /* ScoutAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoutAPIManager.swift; sourceTree = "<group>"; };
+		714869791CC0D2010047BE86 /* IssueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueListViewController.swift; path = ViewControllers/IssueListViewController.swift; sourceTree = "<group>"; };
+		7148697A1CC0D2010047BE86 /* IssueListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueListViewController.xib; path = ViewControllers/IssueListViewController.xib; sourceTree = "<group>"; };
 		B81BF2DD1CB5702E002A5EF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		B81BF2DF1CB570C0002A5EF4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
 		B81BF2E11CB5711F002A5EF4 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 				446C7A2E1CB6471C0016604B /* IssueFilterViewController.xib */,
 				446C7A4A1CB653300016604B /* IssueMainViewController.xib */,
 				446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */,
+				7148697A1CC0D2010047BE86 /* IssueListViewController.xib */,
 				446C7A461CB64C760016604B /* MainViewController.xib */,
 				446C7A321CB647530016604B /* MoreViewController.xib */,
 				446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */,
@@ -148,6 +157,7 @@
 			children = (
 				442345DA1CBDE546007F3865 /* Xibs */,
 				446C7A351CB647690016604B /* IssueDetailsViewController.swift */,
+				714869791CC0D2010047BE86 /* IssueListViewController.swift */,
 				446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */,
 				446C7A491CB653300016604B /* IssueMainViewController.swift */,
 				446C7A391CB647B40016604B /* IssueSubmitViewController.swift */,
@@ -182,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				44D9931C1CB7A6A500BB771C /* ParserClient.swift */,
+				714869751CC09A300047BE86 /* ScoutAPIRouter.swift */,
+				714869771CC09CC60047BE86 /* ScoutAPIManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -358,6 +370,7 @@
 				446C7A301CB6471C0016604B /* IssueFilterViewController.xib in Resources */,
 				446C7A201CB646570016604B /* WelcomeViewController.xib in Resources */,
 				446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */,
+				7148697C1CC0D2010047BE86 /* IssueListViewController.xib in Resources */,
 				446C7A401CB647E40016604B /* ProfileHomeViewController.xib in Resources */,
 				B8F119FA1CB5696B004359DD /* Assets.xcassets in Resources */,
 				446C7A341CB647530016604B /* MoreViewController.xib in Resources */,
@@ -473,10 +486,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714869781CC09CC60047BE86 /* ScoutAPIManager.swift in Sources */,
 				446C7A331CB647530016604B /* MoreViewController.swift in Sources */,
+				7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */,
 				446C7A371CB647690016604B /* IssueDetailsViewController.swift in Sources */,
 				446C7A471CB64C760016604B /* MainViewController.swift in Sources */,
 				44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */,
+				714869761CC09A300047BE86 /* ScoutAPIRouter.swift in Sources */,
 				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
 				446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */,
 				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,

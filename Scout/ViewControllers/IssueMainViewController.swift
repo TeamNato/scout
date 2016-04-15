@@ -16,7 +16,6 @@ class IssueMainViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
     
@@ -47,6 +46,12 @@ class IssueMainViewController: UIViewController {
     }
   }
 
+  
+  @IBAction func onIssueListClicked(sender: AnyObject) {
+    let issueListVC = IssueListViewController(nibName: "IssueListViewController", bundle: nil)
+    presentViewController(issueListVC, animated: true, completion: nil)
+    
+  }
   
   @IBAction func onIssueDetailsClicked(sender: UIButton) {
     let issueDetailsVC = IssueDetailsViewController(nibName: "IssueDetailsViewController", bundle: nil)
