@@ -31,6 +31,7 @@
 		714869781CC09CC60047BE86 /* ScoutAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869771CC09CC60047BE86 /* ScoutAPIManager.swift */; };
 		7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869791CC0D2010047BE86 /* IssueListViewController.swift */; };
 		7148697C1CC0D2010047BE86 /* IssueListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7148697A1CC0D2010047BE86 /* IssueListViewController.xib */; };
+		7148697E1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148697D1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift */; };
 		9B673EEB45A117FAF75B8A12 /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6DBC8A8EB79B3DD0C3DA10 /* Pods_ScoutTests.framework */; };
 		A283191BCE3F3A6C5190ABA5 /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */; };
 		B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DD1CB5702E002A5EF4 /* User.swift */; };
@@ -87,6 +88,7 @@
 		714869771CC09CC60047BE86 /* ScoutAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoutAPIManager.swift; sourceTree = "<group>"; };
 		714869791CC0D2010047BE86 /* IssueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueListViewController.swift; path = ViewControllers/IssueListViewController.swift; sourceTree = "<group>"; };
 		7148697A1CC0D2010047BE86 /* IssueListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueListViewController.xib; path = ViewControllers/IssueListViewController.xib; sourceTree = "<group>"; };
+		7148697D1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseJSONObjectSerializable.swift; sourceTree = "<group>"; };
 		B81BF2DD1CB5702E002A5EF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		B81BF2DF1CB570C0002A5EF4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
 		B81BF2E11CB5711F002A5EF4 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				44D9931C1CB7A6A500BB771C /* ParserClient.swift */,
 				714869751CC09A300047BE86 /* ScoutAPIRouter.swift */,
 				714869771CC09CC60047BE86 /* ScoutAPIManager.swift */,
+				7148697D1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */,
 				714869761CC09A300047BE86 /* ScoutAPIRouter.swift in Sources */,
 				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
+				7148697E1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift in Sources */,
 				446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */,
 				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,
 				B8F119F31CB5696A004359DD /* AppDelegate.swift in Sources */,

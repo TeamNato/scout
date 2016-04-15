@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import BRYXBanner
 class IssueListViewController: UIViewController {
 
     override func viewDidLoad() {
