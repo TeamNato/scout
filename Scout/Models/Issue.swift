@@ -1,5 +1,5 @@
 //
-//  Report.swift
+//  Issue.swift
 //  Scout
 //
 //  Created by Hieu Rocker on 4/6/16.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Report: NSObject, ResponseJSONObjectSerializable {
+class Issue: NSObject, ResponseJSONObjectSerializable {
   var id: String!
   var issueDescription: String?
   var reporter: User?
@@ -21,17 +21,10 @@ class Report: NSObject, ResponseJSONObjectSerializable {
   var modifiedAt: NSDate!
   var isAnonymous: Bool?
   
-  static let sharedDateFormatter = Report.dateFromatter()
+  static let sharedDateFormatter = Issue.dateFromatter()
   
   
-  var reportedAnnonymously: Bool {
-    get {
-      if let _ = reporter {
-        return true
-      }
-      return false
-    }
-  }
+  
   
   
   required init?(json: JSON) {
@@ -42,7 +35,7 @@ class Report: NSObject, ResponseJSONObjectSerializable {
     
     
     // For Date
-    let dateFormatter = Report.sharedDateFormatter
+    let dateFormatter = Issue.sharedDateFormatter
     if let dateString = json["createdAt"].string {
       self.createdAt = dateFormatter.dateFromString(dateString)
     }

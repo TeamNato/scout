@@ -35,7 +35,7 @@
 		9B673EEB45A117FAF75B8A12 /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6DBC8A8EB79B3DD0C3DA10 /* Pods_ScoutTests.framework */; };
 		A283191BCE3F3A6C5190ABA5 /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */; };
 		B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DD1CB5702E002A5EF4 /* User.swift */; };
-		B81BF2E01CB570C0002A5EF4 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DF1CB570C0002A5EF4 /* Report.swift */; };
+		B81BF2E01CB570C0002A5EF4 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DF1CB570C0002A5EF4 /* Issue.swift */; };
 		B81BF2E21CB5711F002A5EF4 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2E11CB5711F002A5EF4 /* Photo.swift */; };
 		B81BF2E41CB57263002A5EF4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2E31CB57263002A5EF4 /* Category.swift */; };
 		B829CAB31CB7A951008CC54F /* PrivateConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B829CAB21CB7A951008CC54F /* PrivateConfig.plist */; };
@@ -90,7 +90,7 @@
 		7148697A1CC0D2010047BE86 /* IssueListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueListViewController.xib; path = ViewControllers/IssueListViewController.xib; sourceTree = "<group>"; };
 		7148697D1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseJSONObjectSerializable.swift; sourceTree = "<group>"; };
 		B81BF2DD1CB5702E002A5EF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
-		B81BF2DF1CB570C0002A5EF4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
+		B81BF2DF1CB570C0002A5EF4 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Issue.swift; path = Models/Issue.swift; sourceTree = "<group>"; };
 		B81BF2E11CB5711F002A5EF4 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
 		B81BF2E31CB57263002A5EF4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
 		B829CAB21CB7A951008CC54F /* PrivateConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrivateConfig.plist; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 				B851BEC51CB57BDD006CDE44 /* Location.swift */,
 				B81BF2E11CB5711F002A5EF4 /* Photo.swift */,
 				44254DD51CB74F7800B384E3 /* PrivateConfig.swift */,
-				B81BF2DF1CB570C0002A5EF4 /* Report.swift */,
+				B81BF2DF1CB570C0002A5EF4 /* Issue.swift */,
 				B81BF2DD1CB5702E002A5EF4 /* User.swift */,
 				B851BEC71CB57C8D006CDE44 /* UserSettings.swift */,
 			);
@@ -507,7 +507,7 @@
 				B851BEC61CB57BDD006CDE44 /* Location.swift in Sources */,
 				446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */,
 				446C7A2F1CB6471C0016604B /* IssueFilterViewController.swift in Sources */,
-				B81BF2E01CB570C0002A5EF4 /* Report.swift in Sources */,
+				B81BF2E01CB570C0002A5EF4 /* Issue.swift in Sources */,
 				44254DD61CB74F7800B384E3 /* PrivateConfig.swift in Sources */,
 				4459F1BB1CB8F77A005B47D2 /* VerifyViewController.swift in Sources */,
 				B81BF2E21CB5711F002A5EF4 /* Photo.swift in Sources */,
