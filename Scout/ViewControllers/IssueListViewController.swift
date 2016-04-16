@@ -9,7 +9,8 @@
 import UIKit
 import Alamofire
 import BRYXBanner
-class IssueListViewController: UIViewController, UITableViewController {
+import Parse
+class IssueListViewController: UIViewController {
   
   var issues = [Issue]()
   var nextPageURLString: String?
@@ -17,23 +18,25 @@ class IssueListViewController: UIViewController, UITableViewController {
   var dateFormatter = NSDateFormatter()
   var notConnectedBanner: Banner?
   
+  @IBOutlet weak var tableView: UITableView!
+  private var refreshControl = UIRefreshControl!()
+  private var loadingAdditionalIssues = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    ScoutAPIManager.sharedInstance.printListIssue()
-    // Do any additional setup after loading the view.
+    tableView.dataSource = self
+    tableView.delegate = self
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 100
+    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+
+    // Refresh control
+    loadIssues()
   }
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    // add refresh control for pull to refresh
-    if (self.refreshControl == nil) {
-      self.refreshControl = UIRefreshControl()
-      self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-      self.refreshControl?.addTarget(self, action: #selector(IssueListViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
-      self.dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
-      self.dateFormatter.timeStyle = NSDateFormatterStyle.LongStyle
-    }
+    
   }
   
   override func viewWillDisappear(animated: Bool) {
@@ -43,68 +46,96 @@ class IssueListViewController: UIViewController, UITableViewController {
     super.viewWillAppear(animated)
   }
   
-  func loadIssues(urlToLoad: String?) {
-    self.isLoading = true
-    let completionHandler: (Result<[Issue], NSError>, String?) -> Void =
-      { (result, nextPage) in
-        self.isLoading = false
-        self.nextPageURLString = nextPage
-        
-        // Tell refresh control it can stop showing up now
-        if self.refreshControl != nil && self.refreshControl!.refreshing {
-          self.refreshControl?.endRefreshing()
-        }
-        guard result.error == nil else {
-          print(result.error)
-          self.nextPageURLString = nil
-          self.isLoading = false
-          if let error = result.error {
-            if error.domain == NSURLErrorDomain {
-              if error.code == NSURLErrorUserAuthenticationRequired {
-                print("auth error")
-              } else if error.code == NSURLErrorNotConnectedToInternet {
-                let path:Path
-                
-                if let archived:[Issue] = PersistenceManager.loadArray(path) {
-                  self.issues = archived
-                } else {
-                  self.issues = [] // don't have any saved issues
-                }
-                
-                // show not connected error & tell em to try again when they do have a connection
-                // check for existing banner
-                if let existingBanner = self.notConnectedBanner {
-                  existingBanner.dismiss()
-                }
-                self.notConnectedBanner = Banner(title: "No Internet Connection",
-                                                 subtitle: "Could not load issues." +
-                  " Try again when you're connected to the internet",
-                                                 image: nil,
-                                                 backgroundColor: UIColor.redColor())
-              }
-              self.notConnectedBanner?.dismissesOnSwipe = true
-              self.notConnectedBanner?.show(duration: nil)
-            }
+  func loadIssues() {
+    if self.isLoading == false {
+      self.isLoading = true
+      var lastMessage = issues.last
+      var query = PFQuery(className: PF_ISSUE_CLASS_NAME)
+      query.includeKey(PF_ISSUE_REPORTER)
+      query.orderByDescending(PF_ISSUE_CREATEDAT)
+      query.limit = 50
+      query.findObjectsInBackgroundWithBlock {
+        (objects: [PFObject]?, error: NSError?) -> Void in
+        if error == nil {
+          // The find succeeded.
+          print("Successfully retrieved \(objects!.count) scores.")
+          // Do something with the found objects
+          for object in (objects as! [PFObject]!).reverse() {
+            self.addIssue(object)
           }
-          return
+        } else {
+          // Log details of the failure
+          print("Error: \(error!) \(error!.userInfo)")
         }
+        self.tableView.reloadData()
+      }
+
+      
+      
     }
   }
   
+  func addIssue(object: PFObject) {
+     print(object)
+  }
+  
+  // MARK: - Pull to Refresh
+  func refresh(sender:AnyObject) {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    defaults.setBool(false, forKey: "loadingOAuthToken")
+    
+    nextPageURLString = nil // so it doesn't try to append the results
+    loadInitialData()
+  }
+  func loadInitialData() {
+    self.loadIssues()
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  } 
+  
+}
+// MARK: - UITableViewDataSource
+extension IssueListViewController: UITableViewDataSource {
+  
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return issues.count
+  }
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
+    
+    let issue = issues[indexPath.row]
+    cell.textLabel!.text = issue.title
+    return cell
   }
   
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+//  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//    
+//    let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
+//    let issue = issues[indexPath.row]
+//    cell.textLabel!.text = issue.objectId
+//    cell.detailTextLabel!.text = issue.description
+//    cell.imageView?.image = nil
+//    // See if we need to load more gists
+//    let rowsToLoadFromBottom = 5;
+//    let rowsLoaded = issues.count
+//   
+//    return cell
+//  }
   
 }
+
+// MARK: - UITableViewDelegate
+extension IssueListViewController: UITableViewDelegate {
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+}
+ 

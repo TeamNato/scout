@@ -18,12 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       print("PrivateConfig.plist is missing.")
       return false
     }
-
     BuddyBuildSDK.setup()
     GMSServices.provideAPIKey(PrivateConfig.GMSApiKey!)
-    
     ParserClient.initialize(launchOptions)
-    
     var vc: UIViewController
     if User.currentUser != nil {
       vc = MainViewController(nibName: "MainViewController", bundle: nil)
