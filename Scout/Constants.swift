@@ -37,6 +37,7 @@ let PF_USER_AUTHDATA            = "authData"
 
 /* Issue */
 let PF_ISSUE_CLASS_NAME					= "Issue"
+let PF_ISSUE_OBJECTID           = "objectId"
 let PF_ISSUE_LOCATIONNAME				= "locationName"
 let PF_ISSUE_PHOTOS             = "photos" //	Pointer to Photo Class
 let PF_ISSUE_REPORTER           = "reporter" //	Pointer to User Class
@@ -48,3 +49,9 @@ let PF_ISSUE_COMMENTS           = "comments"
 let PF_ISSUE_DESCRIPTION				= "description"
 let PF_ISSUE_CATEOGRY           = "category" //	Pointer to Category Class
 let PF_ISSUE_CREATEDAT          = "createdAt"
+
+/* Photo */
+let PF_PHOTO_CLASS_NAME         = "Photo"
+let PF_PHOTO_OBJECTID           = "objectId"
+let PF_PHOTO_URL                = "url"
+

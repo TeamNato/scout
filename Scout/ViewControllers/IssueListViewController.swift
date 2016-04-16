@@ -8,11 +8,13 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 import BRYXBanner
 import Parse
 class IssueListViewController: UIViewController {
   
-  var issues = [Issue]()
+  var issues = [PFObject]()
+  var imageUrl: String?
   var nextPageURLString: String?
   var isLoading = false
   var dateFormatter = NSDateFormatter()
@@ -21,31 +23,19 @@ class IssueListViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   private var refreshControl = UIRefreshControl!()
   private var loadingAdditionalIssues = false
-  
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.dataSource = self
-    tableView.delegate = self
-    tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = 100
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-
+    self.initTableView()
     // Refresh control
     loadIssues()
   }
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-    
-    
+  func initTableView() {
+    tableView.delegate = self
+    tableView.dataSource = self
+    self.tableView.registerNib(UINib(nibName: "IssueListCell", bundle: nil), forCellReuseIdentifier: "IssueListCell")
+    self.tableView.rowHeight = UITableViewAutomaticDimension
+    self.tableView.estimatedRowHeight = 106
   }
-  
-  override func viewWillDisappear(animated: Bool) {
-    if let existingbanner = self.notConnectedBanner{
-      existingbanner.dismiss()
-    }
-    super.viewWillAppear(animated)
-  }
-  
   func loadIssues() {
     if self.isLoading == false {
       self.isLoading = true
@@ -53,15 +43,15 @@ class IssueListViewController: UIViewController {
       var query = PFQuery(className: PF_ISSUE_CLASS_NAME)
       query.includeKey(PF_ISSUE_REPORTER)
       query.orderByDescending(PF_ISSUE_CREATEDAT)
-      query.limit = 50
+      query.limit = 10
       query.findObjectsInBackgroundWithBlock {
         (objects: [PFObject]?, error: NSError?) -> Void in
         if error == nil {
           // The find succeeded.
           print("Successfully retrieved \(objects!.count) scores.")
           // Do something with the found objects
-          for object in (objects as! [PFObject]!).reverse() {
-            self.addIssue(object)
+          if let objects = objects! as? [PFObject] {
+            self.issues = objects
           }
         } else {
           // Log details of the failure
@@ -69,73 +59,78 @@ class IssueListViewController: UIViewController {
         }
         self.tableView.reloadData()
       }
-
-      
-      
     }
   }
-  
-  func addIssue(object: PFObject) {
-     print(object)
-  }
-  
-  // MARK: - Pull to Refresh
-  func refresh(sender:AnyObject) {
-    let defaults = NSUserDefaults.standardUserDefaults()
-    defaults.setBool(false, forKey: "loadingOAuthToken")
-    
-    nextPageURLString = nil // so it doesn't try to append the results
-    loadInitialData()
-  }
-  func loadInitialData() {
-    self.loadIssues()
+  func getImageURL(objectID: String) -> String{
+    var query = PFQuery(className: PF_PHOTO_CLASS_NAME)
+    query.whereKey("objectId", equalTo: objectID)
+    query.findObjectsInBackgroundWithBlock {
+      (objects: [PFObject]?, error: NSError?) -> Void in
+      if error == nil {
+        // The find succeeded.
+        print("Successfully retrieved \(objects!.count) scores.")
+        // Do something with the found objects
+        if let objects = objects! as? [PFObject] {
+          let imageUrl = objects[0]["url"]
+          
+        }
+      } else {
+        // Log details of the failure
+        
+      }
+      self.tableView.reloadData()
+    }
+    print(imageUrl)
+    return imageUrl? "https://unsplash.it/640/480?image=740" : "https://unsplash.it/640/480?image=740"
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  } 
-  
+  }
 }
 // MARK: - UITableViewDataSource
-extension IssueListViewController: UITableViewDataSource {
+extension IssueListViewController: UITableViewDataSource, UITableViewDelegate{
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("IssueListCell") as! IssueListCell
+    let issue = issues[indexPath.row]
+    cell.titleLabel!.text = issue.objectForKey("title") as? String
+    cell.distantLabel!.text = "0.4 km"
+    cell.locationLabel!.text = issue.objectForKey("locationName") as? String
+    cell.voteLabel!.text = "\(issue.objectForKey("commentsCount")!)"
+    cell.commentsCountLabel!.text = "\(issue.objectForKey("commentsCount")!)"
+    let photoObjectId = issue.objectForKey("photos")![0].objectId as String?
+    let imageData = NSData(contentsOfURL: NSURL(string: getImageURL(photoObjectId!))!)
+    cell.issueImage!.image = UIImage(data: imageData!, scale: UIScreen.mainScreen().scale)!
+    
+    return cell
+  }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
-  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return issues.count
   }
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-    
-    let issue = issues[indexPath.row]
-    cell.textLabel!.text = issue.title
-    return cell
+  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 0.01
+  }
+  
+  func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 5
   }
   
   
-//  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//    
-//    let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-//    let issue = issues[indexPath.row]
-//    cell.textLabel!.text = issue.objectId
-//    cell.detailTextLabel!.text = issue.description
-//    cell.imageView?.image = nil
-//    // See if we need to load more gists
-//    let rowsToLoadFromBottom = 5;
-//    let rowsLoaded = issues.count
-//   
-//    return cell
-//  }
-  
-}
-
-// MARK: - UITableViewDelegate
-extension IssueListViewController: UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    let issue = self.issues[indexPath.section]; 
+    
+    let detailVc = IssueDetailsViewController(nibName: "IssueDetailsViewController", bundle: nil)
+    detailVc.issue = issue
+    self.navigationController?.pushViewController(detailVc, animated: true)
   }
+  
 }
+
+
  

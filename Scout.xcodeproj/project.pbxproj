@@ -46,6 +46,8 @@
 		B8F119FD1CB5696B004359DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F119FB1CB5696B004359DD /* LaunchScreen.storyboard */; };
 		B8F11A081CB5696B004359DD /* ScoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F11A071CB5696B004359DD /* ScoutTests.swift */; };
 		C84CF8541CC1F36A00AE9926 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CF8531CC1F36A00AE9926 /* Constants.swift */; };
+		C84CF85B1CC21CC700AE9926 /* IssueListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CF8591CC21CC700AE9926 /* IssueListCell.swift */; };
+		C84CF85C1CC21CC700AE9926 /* IssueListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84CF85A1CC21CC700AE9926 /* IssueListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		B8F368DE1CB57F1A00399591 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B8F368E01CB57F2300399591 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C84CF8531CC1F36A00AE9926 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C84CF8591CC21CC700AE9926 /* IssueListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueListCell.swift; path = ViewControllers/ListIssue/Cell/IssueListCell.swift; sourceTree = "<group>"; };
+		C84CF85A1CC21CC700AE9926 /* IssueListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueListCell.xib; path = ViewControllers/ListIssue/Cell/IssueListCell.xib; sourceTree = "<group>"; };
 		CC6DBC8A8EB79B3DD0C3DA10 /* Pods_ScoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E146D6BFE68D8743B570B3A8 /* Pods-ScoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutTests/Pods-ScoutTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +146,6 @@
 				446C7A2E1CB6471C0016604B /* IssueFilterViewController.xib */,
 				446C7A4A1CB653300016604B /* IssueMainViewController.xib */,
 				446C7A3A1CB647B40016604B /* IssueSubmitViewController.xib */,
-				7148697A1CC0D2010047BE86 /* IssueListViewController.xib */,
 				446C7A461CB64C760016604B /* MainViewController.xib */,
 				446C7A321CB647530016604B /* MoreViewController.xib */,
 				446C7A3E1CB647E40016604B /* ProfileHomeViewController.xib */,
@@ -155,9 +158,9 @@
 		446C7A151CB614030016604B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C84CF8551CC21B0400AE9926 /* ListIssue */,
 				442345DA1CBDE546007F3865 /* Xibs */,
 				446C7A351CB647690016604B /* IssueDetailsViewController.swift */,
-				714869791CC0D2010047BE86 /* IssueListViewController.swift */,
 				446C7A2D1CB6471C0016604B /* IssueFilterViewController.swift */,
 				446C7A491CB653300016604B /* IssueMainViewController.swift */,
 				446C7A391CB647B40016604B /* IssueSubmitViewController.swift */,
@@ -275,6 +278,25 @@
 			path = ScoutTests;
 			sourceTree = "<group>";
 		};
+		C84CF8551CC21B0400AE9926 /* ListIssue */ = {
+			isa = PBXGroup;
+			children = (
+				714869791CC0D2010047BE86 /* IssueListViewController.swift */,
+				7148697A1CC0D2010047BE86 /* IssueListViewController.xib */,
+				C84CF8561CC21C1600AE9926 /* Cell */,
+			);
+			name = ListIssue;
+			sourceTree = "<group>";
+		};
+		C84CF8561CC21C1600AE9926 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C84CF8591CC21CC700AE9926 /* IssueListCell.swift */,
+				C84CF85A1CC21CC700AE9926 /* IssueListCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,6 +393,7 @@
 				446C7A201CB646570016604B /* WelcomeViewController.xib in Resources */,
 				446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */,
 				7148697C1CC0D2010047BE86 /* IssueListViewController.xib in Resources */,
+				C84CF85C1CC21CC700AE9926 /* IssueListCell.xib in Resources */,
 				446C7A401CB647E40016604B /* ProfileHomeViewController.xib in Resources */,
 				B8F119FA1CB5696B004359DD /* Assets.xcassets in Resources */,
 				446C7A341CB647530016604B /* MoreViewController.xib in Resources */,
@@ -507,6 +530,7 @@
 				4459F1BB1CB8F77A005B47D2 /* VerifyViewController.swift in Sources */,
 				B81BF2E21CB5711F002A5EF4 /* Photo.swift in Sources */,
 				B81BF2E41CB57263002A5EF4 /* Category.swift in Sources */,
+				C84CF85B1CC21CC700AE9926 /* IssueListCell.swift in Sources */,
 				C84CF8541CC1F36A00AE9926 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
