@@ -12,7 +12,7 @@ import Parse
 class Issue: PFObject, PFSubclassing {
   @NSManaged var id: String
   @NSManaged var title: String
-  @NSManaged var issueDescription: String
+  //@NSManaged var issueDescription: String
   @NSManaged var reporter: User
   @NSManaged var category: Category
   @NSManaged var votesCount: Int
