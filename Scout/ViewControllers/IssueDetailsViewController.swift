@@ -37,7 +37,7 @@ class IssueDetailsViewController: UIViewController {
         photosSlideshow.circular = true
         photosSlideshow.zoomEnabled = true
         photosSlideshow.contentScaleMode = .ScaleAspectFill
-        photosSlideshow.slideshowInterval = 2000
+        photosSlideshow.slideshowInterval = 5
         
         photosSlideshow.setImageInputs(sources)
         
