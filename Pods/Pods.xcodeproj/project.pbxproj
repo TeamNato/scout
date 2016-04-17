@@ -4769,7 +4769,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87CF75421CF2570D18C1976E782C0800 /* Alamofire.xcconfig */;
 			buildSettings = {
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -5015,7 +5014,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87CF75421CF2570D18C1976E782C0800 /* Alamofire.xcconfig */;
 			buildSettings = {
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

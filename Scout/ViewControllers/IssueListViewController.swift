@@ -63,6 +63,7 @@ class IssueListViewController: UIViewController {
   }
   func getImageURL(objectID: String) -> String{
     var query = PFQuery(className: PF_PHOTO_CLASS_NAME)
+    var imageUrl = ""
     query.whereKey("objectId", equalTo: objectID)
     query.findObjectsInBackgroundWithBlock {
       (objects: [PFObject]?, error: NSError?) -> Void in
@@ -71,7 +72,7 @@ class IssueListViewController: UIViewController {
         print("Successfully retrieved \(objects!.count) scores.")
         // Do something with the found objects
         if let objects = objects! as? [PFObject] {
-          let imageUrl = objects[0]["url"]
+          imageUrl = objects[0]["url"] as! String
           
         }
       } else {
@@ -80,8 +81,8 @@ class IssueListViewController: UIViewController {
       }
       self.tableView.reloadData()
     }
-    print(imageUrl)
-    return imageUrl? "https://unsplash.it/640/480?image=740" : "https://unsplash.it/640/480?image=740"
+    
+    return imageUrl
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -99,8 +100,9 @@ extension IssueListViewController: UITableViewDataSource, UITableViewDelegate{
     cell.voteLabel!.text = "\(issue.objectForKey("commentsCount")!)"
     cell.commentsCountLabel!.text = "\(issue.objectForKey("commentsCount")!)"
     let photoObjectId = issue.objectForKey("photos")![0].objectId as String?
-    let imageData = NSData(contentsOfURL: NSURL(string: getImageURL(photoObjectId!))!)
-    cell.issueImage!.image = UIImage(data: imageData!, scale: UIScreen.mainScreen().scale)!
+    
+    cell.issueImage!.af_setImageWithURL(NSURL(string: "https://unsplash.it/640/480?image=740")!)
+//    cell.issueImage!.image = UIImage(data: imageData!, scale: UIScreen.mainScreen().scale)!
     
     return cell
   }
