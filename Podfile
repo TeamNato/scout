@@ -19,6 +19,7 @@ target 'Scout' do
   pod 'ParseFacebookUtilsV4', '1.11.1'
   pod 'FBSDKCoreKit', '4.10.1'
   pod 'FBSDKLoginKit', '4.10.1'
+  pod 'BRYXBanner'
   shared_pods
 end
 

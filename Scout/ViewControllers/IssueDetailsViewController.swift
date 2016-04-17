@@ -9,7 +9,7 @@
 import UIKit
 
 class IssueDetailsViewController: UIViewController {
-  
+  var issue: PFObject?
   override func viewDidLoad() {
     super.viewDidLoad()
     
