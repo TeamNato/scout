@@ -55,3 +55,6 @@ let PF_PHOTO_CLASS_NAME         = "Photo"
 let PF_PHOTO_OBJECTID           = "objectId"
 let PF_PHOTO_URL                = "url"
 
+/* REGION */
+let PF_REGION_CLASS_NAME        = "Region"
+

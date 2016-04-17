@@ -8,13 +8,16 @@
 
 import UIKit
 import Eureka
-
+import Parse
 class IssueFilterViewController: FormViewController {
+  var listRegions: [String] = []
+  var regionName: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     initializeForm()
+    getListRegion()
     let formValues = form.values()
     print(formValues)
   }
@@ -41,9 +44,9 @@ class IssueFilterViewController: FormViewController {
     form +++=
       Section ("REGION")
       <<< ActionSheetRow<String>() {
-        $0.title = "ActionSheetRow"
+        $0.title = "Region"
         $0.selectorTitle = "Chose region"
-        $0.options = ["Thanh Hoa","Phu Yen", "Quang Ninh", "Vinh Long","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh",]
+        $0.options = ["Thanh Hoa","Phu Yen", "Quang Ninh", "Vinh Long","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh","Thanh Hoa","Phu Yen", "Quang Ninh"]
         $0.value = "Phu Yen"
         
     }
@@ -62,7 +65,6 @@ class IssueFilterViewController: FormViewController {
         $0.value = false
     }
   }
-  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
