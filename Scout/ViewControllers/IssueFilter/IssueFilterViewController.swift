@@ -17,7 +17,6 @@ class IssueFilterViewController: FormViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     initializeForm()
-    getListRegion()
     let formValues = form.values()
     print(formValues)
   }

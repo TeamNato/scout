@@ -30,6 +30,7 @@
 		7148697E1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7148697D1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift */; };
 		7558C1821CC33EF4004E2712 /* IssueFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558C1801CC33EF4004E2712 /* IssueFilterViewController.swift */; };
 		7558C1831CC33EF4004E2712 /* IssueFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7558C1811CC33EF4004E2712 /* IssueFilterViewController.xib */; };
+		75E1A16A1CC39BE5009B1246 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E1A1691CC39BE5009B1246 /* Region.swift */; };
 		9B673EEB45A117FAF75B8A12 /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6DBC8A8EB79B3DD0C3DA10 /* Pods_ScoutTests.framework */; };
 		A283191BCE3F3A6C5190ABA5 /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D235BBEE2D72AD5048A1C /* Pods_Scout.framework */; };
 		B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2DD1CB5702E002A5EF4 /* User.swift */; };
@@ -86,6 +87,7 @@
 		7148697D1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseJSONObjectSerializable.swift; sourceTree = "<group>"; };
 		7558C1801CC33EF4004E2712 /* IssueFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueFilterViewController.swift; path = ViewControllers/IssueFilter/IssueFilterViewController.swift; sourceTree = "<group>"; };
 		7558C1811CC33EF4004E2712 /* IssueFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueFilterViewController.xib; path = ViewControllers/IssueFilter/IssueFilterViewController.xib; sourceTree = "<group>"; };
+		75E1A1691CC39BE5009B1246 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Region.swift; path = Models/Region.swift; sourceTree = "<group>"; };
 		B81BF2DD1CB5702E002A5EF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		B81BF2DF1CB570C0002A5EF4 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Issue.swift; path = Models/Issue.swift; sourceTree = "<group>"; };
 		B81BF2E11CB5711F002A5EF4 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				B81BF2E11CB5711F002A5EF4 /* Photo.swift */,
 				44254DD51CB74F7800B384E3 /* PrivateConfig.swift */,
 				B81BF2DD1CB5702E002A5EF4 /* User.swift */,
+				75E1A1691CC39BE5009B1246 /* Region.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -518,12 +521,12 @@
 				44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */,
 				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
 				7148697E1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift in Sources */,
+				75E1A16A1CC39BE5009B1246 /* Region.swift in Sources */,
 				446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */,
 				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,
 				B8F119F31CB5696A004359DD /* AppDelegate.swift in Sources */,
 				B81BF2DE1CB5702E002A5EF4 /* User.swift in Sources */,
 				7558C1821CC33EF4004E2712 /* IssueFilterViewController.swift in Sources */,
-				B851BEC81CB57C8D006CDE44 /* UserSettings.swift in Sources */,
 				B851BEC41CB57BB3006CDE44 /* Comment.swift in Sources */,
 				446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */,
 				B81BF2E01CB570C0002A5EF4 /* Issue.swift in Sources */,
