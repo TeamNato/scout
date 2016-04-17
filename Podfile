@@ -20,6 +20,8 @@ target 'Scout' do
   pod 'FBSDKCoreKit', '4.10.1'
   pod 'FBSDKLoginKit', '4.10.1'
   pod 'BRYXBanner'
+  pod 'ImageSlideshow', '0.4.0'
+  pod 'ImageSlideshow/Alamofire', '0.4.0'
   shared_pods
 end
 
