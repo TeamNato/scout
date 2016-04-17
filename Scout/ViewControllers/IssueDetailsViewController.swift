@@ -54,6 +54,7 @@ class IssueDetailsViewController: UIViewController {
       locationNameLabel.text = issue.locationName
       let camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: issue.locationCoordinate.latitude, longitude: issue.locationCoordinate.longitude), zoom: 16, bearing: 0, viewingAngle: 0)
       locationMap.camera = camera
+      locationMap.settings.setAllGesturesEnabled(false)
       
       let marker = GMSMarker()
       marker.position = CLLocationCoordinate2DMake(issue.locationCoordinate.latitude, issue.locationCoordinate.longitude)
