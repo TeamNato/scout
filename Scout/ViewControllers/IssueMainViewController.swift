@@ -46,6 +46,10 @@ class IssueMainViewController: UIViewController {
     }
   }
 
+  @IBAction func onIssueFilterClicked(sender: AnyObject) {
+    let issueFilterVC = IssueFilterViewController(nibName: "IssueFilterViewController", bundle: nil)
+    presentViewController(issueFilterVC, animated: true, completion: nil)
+  }
   
   @IBAction func onIssueListClicked(sender: AnyObject) {
     let issueListVC = IssueListViewController(nibName: "IssueListViewController", bundle: nil)

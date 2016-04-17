@@ -19,7 +19,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <items>
                         <navigationItem title="Title" id="aJs-uH-3dX">
-                            <barButtonItem key="leftBarButtonItem" title="Filter" id="W4H-qd-Vul"/>
+                            <barButtonItem key="leftBarButtonItem" title="Filter" id="W4H-qd-Vul">
+                                <connections>
+                                    <action selector="onIssueFilterClicked:" destination="-1" id="f0b-hB-QJM"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="List" id="cP6-J9-If8">
                                 <connections>
                                     <action selector="onIssueListClicked:" destination="-1" id="EUj-oZ-j0t"/>
