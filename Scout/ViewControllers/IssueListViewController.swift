@@ -64,35 +64,6 @@ class IssueListViewController: UIViewController {
       }
     }
   }
-  
-  func getImageURL(objectID: String) -> String {
-    let query = PFQuery(className: PF_PHOTO_CLASS_NAME)
-    var imageUrl = ""
-    query.whereKey("objectId", equalTo: objectID)
-    query.findObjectsInBackgroundWithBlock {
-      (objects: [PFObject]?, error: NSError?) -> Void in
-      if error == nil {
-        // The find succeeded.
-        print("Successfully retrieved \(objects!.count) scores.")
-        // Do something with the found objects
-        if let objects = objects {
-          imageUrl = objects[0]["url"] as! String
-          
-        }
-      } else {
-        // Log details of the failure
-        
-      }
-      self.tableView.reloadData()
-    }
-    
-    return imageUrl
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
 }
 
 // MARK: - UITableViewDataSource
@@ -105,33 +76,21 @@ extension IssueListViewController: UITableViewDataSource {
     return cell
   }
   
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
-  }
-  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return issues.count
   }
   
-  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 0.01
-  }
-  
-  func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-    return 5
-  }
-  
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    let issue = self.issues[indexPath.section]; 
+    let issue = self.issues[indexPath.row];
     
-    let detailVc = IssueDetailsViewController(nibName: "IssueDetailsViewController", bundle: nil)
-    detailVc.issue = issue
-    self.navigationController?.pushViewController(detailVc, animated: true)
+    let detailsVC = IssueDetailsViewController(nibName: "IssueDetailsViewController", bundle: nil)
+    detailsVC.issue = issue
+    presentViewController(detailsVC, animated: true, completion: nil)
   }
   
 }
 
 extension IssueListViewController: UITableViewDelegate {
-  
+
 }

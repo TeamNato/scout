@@ -17,6 +17,8 @@ class IssueListCell: UITableViewCell {
   @IBOutlet weak var commentsCountLabel: UILabel!
   @IBOutlet weak var distantLabel: UILabel!
   
+  
+  
   var issue: Issue? {
     didSet {
       titleLabel!.text = issue?.title
