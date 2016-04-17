@@ -13,6 +13,7 @@ PODS:
   - BRYXBanner/Core (0.5.2)
   - BuddyBuildSDK (1.0.6)
   - DateTools (1.7.0)
+  - Eureka (1.5.0)
   - FBSDKCoreKit (4.10.1):
     - Bolts (~> 1.5)
   - FBSDKLoginKit (4.10.1):
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - BRYXBanner
   - BuddyBuildSDK (= 1.0.6)
   - DateTools (= 1.7.0)
+  - Eureka
   - FBSDKCoreKit (= 4.10.1)
   - FBSDKLoginKit (= 4.10.1)
   - FontAwesome.swift (= 0.7.1)
@@ -52,6 +54,7 @@ SPEC CHECKSUMS:
   BRYXBanner: 5f0911d52e0a77e088f7ea7ddcdebd02afb7828a
   BuddyBuildSDK: f9923ef709e3cd48b1eb2489f082e91a467c47bc
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
   FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   FontAwesome.swift: 21ec9db57af8b92d4b4d6ca8208b9ae07031e828

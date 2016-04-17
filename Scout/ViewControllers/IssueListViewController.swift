@@ -19,7 +19,6 @@ class IssueListViewController: UIViewController {
   var isLoading = false
   var dateFormatter = NSDateFormatter()
   var notConnectedBanner: Banner?
-  
   @IBOutlet weak var tableView: UITableView!
   private var refreshControl = UIRefreshControl!()
   private var loadingAdditionalIssues = false

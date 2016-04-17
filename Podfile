@@ -20,6 +20,7 @@ target 'Scout' do
   pod 'FBSDKCoreKit', '4.10.1'
   pod 'FBSDKLoginKit', '4.10.1'
   pod 'BRYXBanner'
+  pod 'Eureka'
   shared_pods
 end
 
