@@ -6,11 +6,16 @@
 //  Copyright © 2016 Team Nato. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Parse
 
-class Photo: NSObject {
-  var id: String!
-  var width = 0
-  var height = 0
-  var url: NSURL!
+class Photo: PFObject, PFSubclassing {
+  @NSManaged var id: String
+  @NSManaged var width: Int
+  @NSManaged var height: Int
+  @NSManaged var url: String
+  
+  class func parseClassName() -> String {
+    return "Photo"
+  }
 }

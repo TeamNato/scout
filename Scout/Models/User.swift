@@ -6,18 +6,17 @@
 //  Copyright © 2016 Team Nato. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Parse
 import ParseFacebookUtilsV4
 
-class User: NSObject {
-  var id: String!
-  var firstName: String!
-  var lastName: String!
-  var avatarUrl: NSURL?
-  var reportsCount = 0
-  var phoneVerified = false
-  var settings: UserSettings?
+class User: PFObject, PFSubclassing {
+  @NSManaged var id: String
+  @NSManaged var firstName: String
+  @NSManaged var lastName: String
+  @NSManaged var avatarUrl: String
+  @NSManaged var reportsCount: Int
+  @NSManaged var phoneVerified: Bool
   var pfUser: PFUser?
   
   static var _currentUser: User?
@@ -26,8 +25,8 @@ class User: NSObject {
       if _currentUser == nil {
         if let pfUser = PFUser.currentUser() {
           let user = User()
-          user.firstName = pfUser.objectForKey("firstName") as? String
-          user.lastName = pfUser.objectForKey("lastName") as? String
+          user.firstName = (pfUser.objectForKey("firstName") as? String)!
+          user.lastName = (pfUser.objectForKey("lastName") as? String)!
           user.phoneVerified = pfUser.objectForKey("phoneVerified") as? Bool ?? false
           user.pfUser = pfUser
           _currentUser = user
@@ -74,5 +73,9 @@ class User: NSObject {
     set(user) {
       _currentUser = user
     }
+  }
+  
+  class func parseClassName() -> String {
+    return "User"
   }
 }

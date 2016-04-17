@@ -16,5 +16,11 @@ class ParserClient: NSObject {
     Parse.setApplicationId(PrivateConfig.parseApplicationId!, clientKey: PrivateConfig.parseClientId!)
     
     PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+    
+    Category.registerSubclass()
+    Comment.registerSubclass()
+    Issue.registerSubclass()
+    Photo.registerSubclass()
+    User.registerSubclass()
   }
 }
