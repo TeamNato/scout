@@ -10,26 +10,26 @@ import Foundation
 import Parse
 import ParseFacebookUtilsV4
 
-class User: PFObject, PFSubclassing {
+class User: PFUser {
   @NSManaged var id: String
   @NSManaged var firstName: String
   @NSManaged var lastName: String
-  @NSManaged var avatarUrl: String
+  @NSManaged var avatarURL: String
   @NSManaged var reportsCount: Int
   @NSManaged var phoneVerified: Bool
   var pfUser: PFUser?
   
-  static var _currentUser: User?
-  class var currentUser: User? {
+  static var _localUser: User?
+  class var localUser: User? {
     get {
-      if _currentUser == nil {
+      if _localUser == nil {
         if let pfUser = PFUser.currentUser() {
           let user = User()
           user.firstName = (pfUser.objectForKey("firstName") as? String)!
           user.lastName = (pfUser.objectForKey("lastName") as? String)!
           user.phoneVerified = pfUser.objectForKey("phoneVerified") as? Bool ?? false
           user.pfUser = pfUser
-          _currentUser = user
+          _localUser = user
           
           if let _ = FBSDKAccessToken.currentAccessToken() {
             let requestParams = ["fields": "id, email, first_name, last_name"]
@@ -67,15 +67,19 @@ class User: PFObject, PFSubclassing {
           }
         }
       }
-      return _currentUser
+      return _localUser
     }
     
     set(user) {
-      _currentUser = user
+      _localUser = user
     }
   }
   
-  class func parseClassName() -> String {
-    return "User"
+  override class func parseClassName() -> String {
+    return "_User"
+  }
+  
+  func fullName() -> String {
+    return firstName + " " + lastName
   }
 }

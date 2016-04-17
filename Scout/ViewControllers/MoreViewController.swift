@@ -16,7 +16,7 @@ class MoreViewController: UIViewController {
     // Do any additional setup after loading the view.
   }  
   @IBAction func onLogOutTapped(sender: UIButton) {
-    User.currentUser = nil
+    User.localUser = nil
     PFUser.logOutInBackgroundWithBlock { (error) in
       if let error = error {
         print(error.localizedDescription)

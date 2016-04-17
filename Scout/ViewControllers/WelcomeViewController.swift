@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
         return
       }
       
-      if let currentUser = User.currentUser {
+      if let currentUser = User.localUser {
         var vc: UIViewController?
         if currentUser.phoneVerified {
           vc = MainViewController(nibName: "MainViewController", bundle: nil)
