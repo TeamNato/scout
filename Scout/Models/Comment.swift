@@ -6,11 +6,15 @@
 //  Copyright © 2016 Team Nato. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Parse
 
-class Comment: NSObject {
-  var id: String!
-  var user: User!
-  var message: String?
-  var createdAt: NSDate!
+class Comment: PFObject, PFSubclassing {
+  @NSManaged var id: String
+  @NSManaged var user: User
+  @NSManaged var message: String
+  
+  class func parseClassName() -> String {
+    return "Comment"
+  }
 }

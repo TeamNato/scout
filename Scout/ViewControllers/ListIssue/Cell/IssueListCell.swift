@@ -9,7 +9,7 @@
 import UIKit
 
 class IssueListCell: UITableViewCell {
-
+  
   @IBOutlet weak var issueImage: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
@@ -17,18 +17,23 @@ class IssueListCell: UITableViewCell {
   @IBOutlet weak var commentsCountLabel: UILabel!
   @IBOutlet weak var distantLabel: UILabel!
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        issueImage.layer.cornerRadius = 5
-        issueImage.layer.masksToBounds = true
+  var issue: Issue? {
+    didSet {
+      titleLabel!.text = issue?.title
+      distantLabel!.text = "0.4 km"
+      locationLabel!.text = issue?.locationName
+      voteLabel!.text = String(issue?.votesCount ?? 0)
+      commentsCountLabel!.text = String(issue?.commentsCount ?? 0)
+
+      let placeHolder = UIImage()
+      if let photos = issue?.photos {
+        issueImage!.af_setImageWithURL(NSURL(string: photos.first!.url)!, placeholderImage: placeHolder)
+      } else {
+        issueImage.image = placeHolder
+      }
       
+      issueImage.layer.cornerRadius = 5
+      issueImage.layer.masksToBounds = true
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+  }
 }

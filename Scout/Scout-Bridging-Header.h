@@ -7,6 +7,7 @@
 #import <CommonCrypto/CommonDigest.h>
 
 #import <Parse/Parse.h>
+#import <Parse/PFObject+Subclass.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import <Bolts/Bolts.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
