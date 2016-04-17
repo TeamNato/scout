@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     GMSServices.provideAPIKey(PrivateConfig.GMSApiKey!)
     ParserClient.initialize(launchOptions)
     var vc: UIViewController
-    if User.currentUser != nil {
+    if User.localUser != nil {
       vc = MainViewController(nibName: "MainViewController", bundle: nil)
     } else {
       vc = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)

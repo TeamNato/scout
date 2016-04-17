@@ -6,10 +6,15 @@
 //  Copyright © 2016 Team Nato. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Parse
 
-class Category: NSObject {
-  var id: String!
-  var name: String!
-  var iconUrl: NSURL!
+class Category: PFObject, PFSubclassing {
+  @NSManaged var id: String
+  @NSManaged var name: String
+  @NSManaged var iconUrl: NSURL
+  
+  class func parseClassName() -> String {
+    return "Category"
+  }
 }

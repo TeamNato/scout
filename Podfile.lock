@@ -20,6 +20,12 @@ PODS:
     - FBSDKCoreKit
   - FontAwesome.swift (0.7.1)
   - GoogleMaps (1.13.0)
+  - ImageSlideshow (0.4.0):
+    - ImageSlideshow/Core (= 0.4.0)
+  - ImageSlideshow/Alamofire (0.4.0):
+    - AlamofireImage (~> 2.0)
+    - ImageSlideshow/Core
+  - ImageSlideshow/Core (0.4.0)
   - MBProgressHUD (0.9.2)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
@@ -42,6 +48,8 @@ DEPENDENCIES:
   - FBSDKLoginKit (= 4.10.1)
   - FontAwesome.swift (= 0.7.1)
   - GoogleMaps
+  - ImageSlideshow (= 0.4.0)
+  - ImageSlideshow/Alamofire (= 0.4.0)
   - MBProgressHUD (= 0.9.2)
   - Parse (= 1.13.0)
   - ParseFacebookUtilsV4 (= 1.11.1)
@@ -59,6 +67,7 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   FontAwesome.swift: 21ec9db57af8b92d4b4d6ca8208b9ae07031e828
   GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
+  ImageSlideshow: 0d3632bc0c2b4d3fff24a49ce4d3022af8238b03
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421

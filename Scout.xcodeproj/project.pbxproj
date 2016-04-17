@@ -38,8 +38,6 @@
 		B81BF2E41CB57263002A5EF4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BF2E31CB57263002A5EF4 /* Category.swift */; };
 		B829CAB31CB7A951008CC54F /* PrivateConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B829CAB21CB7A951008CC54F /* PrivateConfig.plist */; };
 		B851BEC41CB57BB3006CDE44 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B851BEC31CB57BB3006CDE44 /* Comment.swift */; };
-		B851BEC61CB57BDD006CDE44 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B851BEC51CB57BDD006CDE44 /* Location.swift */; };
-		B851BEC81CB57C8D006CDE44 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B851BEC71CB57C8D006CDE44 /* UserSettings.swift */; };
 		B8F119F31CB5696A004359DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F119F21CB5696A004359DD /* AppDelegate.swift */; };
 		B8F119F81CB5696B004359DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F119F61CB5696B004359DD /* Main.storyboard */; };
 		B8F119FA1CB5696B004359DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F119F91CB5696B004359DD /* Assets.xcassets */; };
@@ -94,8 +92,6 @@
 		B81BF2E31CB57263002A5EF4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
 		B829CAB21CB7A951008CC54F /* PrivateConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrivateConfig.plist; sourceTree = "<group>"; };
 		B851BEC31CB57BB3006CDE44 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Models/Comment.swift; sourceTree = "<group>"; };
-		B851BEC51CB57BDD006CDE44 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
-		B851BEC71CB57C8D006CDE44 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = Models/UserSettings.swift; sourceTree = "<group>"; };
 		B8F119EF1CB5696A004359DD /* Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F119F21CB5696A004359DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8F119F71CB5696B004359DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -229,12 +225,10 @@
 			children = (
 				B81BF2E31CB57263002A5EF4 /* Category.swift */,
 				B851BEC31CB57BB3006CDE44 /* Comment.swift */,
-				B851BEC51CB57BDD006CDE44 /* Location.swift */,
+				B81BF2DF1CB570C0002A5EF4 /* Issue.swift */,
 				B81BF2E11CB5711F002A5EF4 /* Photo.swift */,
 				44254DD51CB74F7800B384E3 /* PrivateConfig.swift */,
-				B81BF2DF1CB570C0002A5EF4 /* Issue.swift */,
 				B81BF2DD1CB5702E002A5EF4 /* User.swift */,
-				B851BEC71CB57C8D006CDE44 /* UserSettings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -531,7 +525,6 @@
 				7558C1821CC33EF4004E2712 /* IssueFilterViewController.swift in Sources */,
 				B851BEC81CB57C8D006CDE44 /* UserSettings.swift in Sources */,
 				B851BEC41CB57BB3006CDE44 /* Comment.swift in Sources */,
-				B851BEC61CB57BDD006CDE44 /* Location.swift in Sources */,
 				446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */,
 				B81BF2E01CB570C0002A5EF4 /* Issue.swift in Sources */,
 				44254DD61CB74F7800B384E3 /* PrivateConfig.swift in Sources */,
