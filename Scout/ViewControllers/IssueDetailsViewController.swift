@@ -21,6 +21,8 @@ class IssueDetailsViewController: UIViewController {
   @IBOutlet weak var locationMap: GMSMapView!
   @IBOutlet weak var commentsTable: UITableView!
   @IBOutlet weak var commentsTableHeightContrstaint: NSLayoutConstraint!
+  @IBOutlet weak var commentText: UITextField!
+  @IBOutlet weak var postButton: UIButton!
   
   var comments: [Comment]?
   
@@ -67,6 +69,10 @@ class IssueDetailsViewController: UIViewController {
       setupCommentsTable()
     }
     
+    getComments()
+  }
+  
+  func getComments() {
     issue?.getComments({ (comments) in
       self.comments = comments
       self.setupCommentsTable()
@@ -101,6 +107,20 @@ class IssueDetailsViewController: UIViewController {
     self.presentViewController(ctr, animated: true, completion: nil)
   }
 
+  @IBAction func onPostTapped(sender: UIButton) {
+    let message = commentText.text
+    
+    let pfComment = PFObject(className: "Comment")
+    pfComment["message"] = message!
+    pfComment["user"] = PFUser.currentUser()
+    pfComment["issue"] = issue
+    
+    pfComment.saveInBackgroundWithBlock { (success, error) in
+      self.commentText.text = ""
+      self.getComments()
+    }
+  }
+  
 }
 
 extension IssueDetailsViewController: UITableViewDelegate {
