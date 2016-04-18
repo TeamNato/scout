@@ -33,14 +33,22 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3J-x6-usq" userLabel="Time Label">
+                            <rect key="frame" x="296" y="1" width="30" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.66666666669999997" green="0.72156862749999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="4zT-Y2-dM7" firstAttribute="leading" secondItem="iN3-D7-25U" secondAttribute="leading" id="1o8-8K-VVT"/>
+                        <constraint firstItem="F3J-x6-usq" firstAttribute="centerY" secondItem="4zT-Y2-dM7" secondAttribute="centerY" id="2kO-Xz-f3O"/>
                         <constraint firstItem="eg7-fM-wzR" firstAttribute="leading" secondItem="iN3-D7-25U" secondAttribute="leading" id="7Lh-l7-rf8"/>
                         <constraint firstAttribute="trailing" secondItem="eg7-fM-wzR" secondAttribute="trailing" id="Cqj-2w-iDB"/>
                         <constraint firstItem="eg7-fM-wzR" firstAttribute="top" secondItem="iN3-D7-25U" secondAttribute="top" id="ImI-Jd-PP0"/>
                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eg7-fM-wzR" secondAttribute="bottom" id="KKW-N1-gVe"/>
+                        <constraint firstAttribute="trailing" secondItem="F3J-x6-usq" secondAttribute="trailing" constant="8" id="c0j-rU-lKh"/>
                         <constraint firstItem="4zT-Y2-dM7" firstAttribute="top" secondItem="iN3-D7-25U" secondAttribute="top" id="e2h-5o-xu0"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="k0w-du-Hl5"/>
                         <constraint firstItem="eg7-fM-wzR" firstAttribute="top" secondItem="4zT-Y2-dM7" secondAttribute="bottom" constant="4" id="oa2-cQ-jyh"/>
@@ -66,6 +74,7 @@
                 <outlet property="avatarImage" destination="Bnt-5P-1g7" id="Q8a-XA-EEj"/>
                 <outlet property="commentLabel" destination="eg7-fM-wzR" id="Bsj-JG-ERz"/>
                 <outlet property="nameLabel" destination="4zT-Y2-dM7" id="e6g-cr-9BJ"/>
+                <outlet property="timeLabel" destination="F3J-x6-usq" id="Iv8-mq-G1q"/>
             </connections>
             <point key="canvasLocation" x="71" y="93.5"/>
         </view>
