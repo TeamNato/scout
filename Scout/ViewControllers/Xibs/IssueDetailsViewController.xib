@@ -10,11 +10,14 @@
                 <outlet property="commentText" destination="1o6-Pq-4SD" id="Uhd-GU-hLW"/>
                 <outlet property="commentsTable" destination="T4i-Lb-bp9" id="eIu-nv-Am3"/>
                 <outlet property="commentsTableHeightContrstaint" destination="qfK-db-OYG" id="GfV-K5-IDh"/>
+                <outlet property="contentView" destination="uEc-iz-6g5" id="ccv-gQ-tvI"/>
                 <outlet property="descriptionLabel" destination="bQ4-Vx-xmU" id="HJU-Aa-D3p"/>
+                <outlet property="keyboardHeight" destination="LGy-CA-CjJ" id="OVI-hB-zLr"/>
                 <outlet property="locationMap" destination="daO-QR-8tc" id="yuG-Lm-nIP"/>
                 <outlet property="locationNameLabel" destination="ygx-mJ-FLT" id="B3Y-4r-OHP"/>
                 <outlet property="photosSlideshow" destination="2w8-Fl-QQs" id="1TZ-ss-cPR"/>
                 <outlet property="postButton" destination="TUM-Uv-UNU" id="eme-04-YpO"/>
+                <outlet property="scrollView" destination="5gB-Ba-KZC" id="al1-t1-0L1"/>
                 <outlet property="titleLabel" destination="t7k-yr-6ZB" id="i2q-iQ-nDy"/>
                 <outlet property="userImage" destination="V10-e1-BIZ" id="7zr-Us-9e9"/>
                 <outlet property="userLabel" destination="yQ9-fK-NuZ" id="ykv-cC-Frv"/>

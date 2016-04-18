@@ -23,6 +23,9 @@ class IssueDetailsViewController: UIViewController {
   @IBOutlet weak var commentsTableHeightContrstaint: NSLayoutConstraint!
   @IBOutlet weak var commentText: UITextField!
   @IBOutlet weak var postButton: UIButton!
+  @IBOutlet weak var keyboardHeight: NSLayoutConstraint!
+  @IBOutlet weak var scrollView: UIScrollView!
+  @IBOutlet weak var contentView: UIView!
   
   var comments: [Comment]?
   
@@ -30,6 +33,13 @@ class IssueDetailsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IssueDetailsViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(IssueDetailsViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+    
+    let tapDismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(IssueDetailsViewController.dismissKeyboard))
+    view.addGestureRecognizer(tapDismiss)
+
 
     if let issue = issue {
       let photos = issue.photos
@@ -72,6 +82,25 @@ class IssueDetailsViewController: UIViewController {
     getComments()
   }
   
+  func dismissKeyboard() {
+    commentText.resignFirstResponder()
+  }
+  
+  func keyboardWillShow(notification: NSNotification) {
+    var info = notification.userInfo!
+    let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    
+    UIView.animateWithDuration(0.1, animations: { () -> Void in
+      self.keyboardHeight.constant = keyboardFrame.size.height
+    })
+  }
+  
+  func keyboardWillHide(notification: NSNotification) {
+    UIView.animateWithDuration(0.1, animations: { () -> Void in
+      self.keyboardHeight.constant = 0
+    })
+  }
+  
   func getComments() {
     issue?.getComments({ (comments) in
       self.comments = comments
@@ -108,6 +137,7 @@ class IssueDetailsViewController: UIViewController {
   }
 
   @IBAction func onPostTapped(sender: UIButton) {
+    dismissKeyboard()
     let message = commentText.text
     
     let pfComment = PFObject(className: "Comment")
