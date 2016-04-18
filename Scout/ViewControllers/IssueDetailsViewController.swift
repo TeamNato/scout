@@ -19,6 +19,10 @@ class IssueDetailsViewController: UIViewController {
   @IBOutlet weak var userImage: UIImageView!
   @IBOutlet weak var locationNameLabel: UILabel!
   @IBOutlet weak var locationMap: GMSMapView!
+  @IBOutlet weak var commentsTable: UITableView!
+  @IBOutlet weak var commentsTableHeightContrstaint: NSLayoutConstraint!
+  
+  var comments: [Comment]?
   
   var transitionDelegate: ZoomAnimatedTransitioningDelegate?
 
@@ -59,7 +63,25 @@ class IssueDetailsViewController: UIViewController {
       let marker = GMSMarker()
       marker.position = CLLocationCoordinate2DMake(issue.locationCoordinate.latitude, issue.locationCoordinate.longitude)
       marker.map = locationMap
+      
+      setupCommentsTable()
     }
+    
+    issue?.getComments({ (comments) in
+      self.comments = comments
+      self.setupCommentsTable()
+    })
+  }
+  
+  func setupCommentsTable() {
+    commentsTable.registerNib(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
+    commentsTable.rowHeight = UITableViewAutomaticDimension
+    commentsTable.estimatedRowHeight = 60
+    
+    commentsTable.delegate = self
+    commentsTable.dataSource = self
+    
+    commentsTable.reloadData()
   }
   
   @IBAction func onBackTapped(sender: AnyObject) {
@@ -79,4 +101,21 @@ class IssueDetailsViewController: UIViewController {
     self.presentViewController(ctr, animated: true, completion: nil)
   }
 
+}
+
+extension IssueDetailsViewController: UITableViewDelegate {
+  
+}
+
+extension IssueDetailsViewController: UITableViewDataSource {
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return comments?.count ?? 0
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = commentsTable.dequeueReusableCellWithIdentifier("CommentCell", forIndexPath: indexPath) as! CommentCell
+    cell.comment = comments![indexPath.row]
+    
+    return cell
+  }
 }

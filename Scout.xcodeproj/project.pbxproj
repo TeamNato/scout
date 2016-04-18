@@ -26,6 +26,8 @@
 		446C7A481CB64C760016604B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A461CB64C760016604B /* MainViewController.xib */; };
 		446C7A4B1CB653300016604B /* IssueMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7A491CB653300016604B /* IssueMainViewController.swift */; };
 		446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A4A1CB653300016604B /* IssueMainViewController.xib */; };
+		4499E5991CC3D6A200C2E938 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4499E5981CC3D6A200C2E938 /* CommentCell.xib */; };
+		4499E59B1CC4693300C2E938 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4499E59A1CC4693300C2E938 /* CommentCell.swift */; };
 		44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D9931C1CB7A6A500BB771C /* ParserClient.swift */; };
 		7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869791CC0D2010047BE86 /* IssueListViewController.swift */; };
 		7148697C1CC0D2010047BE86 /* IssueListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7148697A1CC0D2010047BE86 /* IssueListViewController.xib */; };
@@ -81,6 +83,8 @@
 		446C7A461CB64C760016604B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ViewControllers/Xibs/MainViewController.xib; sourceTree = "<group>"; };
 		446C7A491CB653300016604B /* IssueMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueMainViewController.swift; path = ViewControllers/IssueMainViewController.swift; sourceTree = "<group>"; };
 		446C7A4A1CB653300016604B /* IssueMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueMainViewController.xib; path = ViewControllers/Xibs/IssueMainViewController.xib; sourceTree = "<group>"; };
+		4499E5981CC3D6A200C2E938 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentCell.xib; path = Views/CommentCell.xib; sourceTree = "<group>"; };
+		4499E59A1CC4693300C2E938 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = Views/CommentCell.swift; sourceTree = "<group>"; };
 		44D9931C1CB7A6A500BB771C /* ParserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParserClient.swift; path = Utils/ParserClient.swift; sourceTree = "<group>"; };
 		45E2CB7BF6C25A06526CF36D /* Pods-ScoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutTests/Pods-ScoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		714869791CC0D2010047BE86 /* IssueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueListViewController.swift; path = ViewControllers/IssueListViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 		446C7A161CB6140B0016604B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4499E5981CC3D6A200C2E938 /* CommentCell.xib */,
+				4499E59A1CC4693300C2E938 /* CommentCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 				446C7A3C1CB647B40016604B /* IssueSubmitViewController.xib in Resources */,
 				4459F1BC1CB8F77B005B47D2 /* VerifyViewController.xib in Resources */,
 				446C7A481CB64C760016604B /* MainViewController.xib in Resources */,
+				4499E5991CC3D6A200C2E938 /* CommentCell.xib in Resources */,
 				B8F119FD1CB5696B004359DD /* LaunchScreen.storyboard in Resources */,
 				B829CAB31CB7A951008CC54F /* PrivateConfig.plist in Resources */,
 				446C7A301CB6471C0016604B /* IssueFilterViewController.xib in Resources */,
@@ -506,6 +513,7 @@
 				446C7A331CB647530016604B /* MoreViewController.swift in Sources */,
 				7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */,
 				446C7A371CB647690016604B /* IssueDetailsViewController.swift in Sources */,
+				4499E59B1CC4693300C2E938 /* CommentCell.swift in Sources */,
 				446C7A471CB64C760016604B /* MainViewController.swift in Sources */,
 				44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */,
 				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
