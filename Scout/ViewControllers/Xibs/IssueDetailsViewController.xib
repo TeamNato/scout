@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.otf">
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IssueDetailsViewController" customModule="Scout" customModuleProvider="target">
             <connections>
@@ -22,6 +27,7 @@
                 <outlet property="userImage" destination="V10-e1-BIZ" id="7zr-Us-9e9"/>
                 <outlet property="userLabel" destination="yQ9-fK-NuZ" id="ykv-cC-Frv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voteButton" destination="qXy-89-N4l" id="Ovl-OU-ayp"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -133,12 +139,31 @@
                                     </constraints>
                                 </view>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T4i-Lb-bp9" userLabel="Comments Table">
-                                    <rect key="frame" x="8" y="537" width="359" height="300"/>
+                                    <rect key="frame" x="8" y="595" width="359" height="300"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="qfK-db-OYG"/>
                                     </constraints>
                                 </tableView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKq-ni-Zad">
+                                    <rect key="frame" x="8" y="537" width="359" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXy-89-N4l">
+                                            <rect key="frame" x="164" y="7" width="30" height="36"/>
+                                            <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="24"/>
+                                            <state key="normal" title=""/>
+                                            <connections>
+                                                <action selector="onVoteTapped:" destination="-1" eventType="touchUpInside" id="Tdi-YB-qnh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="qXy-89-N4l" firstAttribute="centerY" secondItem="nKq-ni-Zad" secondAttribute="centerY" id="06P-CC-mcL"/>
+                                        <constraint firstItem="qXy-89-N4l" firstAttribute="centerX" secondItem="nKq-ni-Zad" secondAttribute="centerX" id="hvj-Ho-27o"/>
+                                        <constraint firstAttribute="height" constant="50" id="o3D-Je-4dn"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.93641493055555558" green="0.93641493055555558" blue="0.93641493055555558" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -154,12 +179,15 @@
                                 <constraint firstAttribute="trailing" secondItem="T4i-Lb-bp9" secondAttribute="trailing" constant="8" id="WI6-Am-twc"/>
                                 <constraint firstAttribute="trailing" secondItem="2w8-Fl-QQs" secondAttribute="trailing" id="XRv-aV-Ord"/>
                                 <constraint firstAttribute="trailing" secondItem="bQ4-Vx-xmU" secondAttribute="trailing" constant="8" id="Yzs-4a-w9L"/>
-                                <constraint firstItem="T4i-Lb-bp9" firstAttribute="top" secondItem="kWX-Fs-9LS" secondAttribute="bottom" constant="8" id="c0V-hr-uyh"/>
+                                <constraint firstItem="T4i-Lb-bp9" firstAttribute="top" secondItem="nKq-ni-Zad" secondAttribute="bottom" constant="8" id="dDl-94-bJ4"/>
                                 <constraint firstItem="bQ4-Vx-xmU" firstAttribute="top" secondItem="t7k-yr-6ZB" secondAttribute="bottom" constant="16" id="dbW-kk-fCy"/>
+                                <constraint firstItem="nKq-ni-Zad" firstAttribute="top" secondItem="kWX-Fs-9LS" secondAttribute="bottom" constant="8" id="e0Q-jn-C1Y"/>
                                 <constraint firstItem="8ro-kU-a1J" firstAttribute="leading" secondItem="uEc-iz-6g5" secondAttribute="leading" constant="8" id="fZK-hB-lDD"/>
                                 <constraint firstItem="kWX-Fs-9LS" firstAttribute="top" secondItem="8ro-kU-a1J" secondAttribute="bottom" constant="8" id="hPc-60-WAU"/>
                                 <constraint firstItem="8ro-kU-a1J" firstAttribute="top" secondItem="bQ4-Vx-xmU" secondAttribute="bottom" constant="8" id="oCj-Pa-OSd"/>
+                                <constraint firstAttribute="trailing" secondItem="nKq-ni-Zad" secondAttribute="trailing" constant="8" id="pLv-e1-8OR"/>
                                 <constraint firstAttribute="trailing" secondItem="t7k-yr-6ZB" secondAttribute="trailing" constant="8" id="qYY-MC-jek"/>
+                                <constraint firstItem="nKq-ni-Zad" firstAttribute="leading" secondItem="uEc-iz-6g5" secondAttribute="leading" constant="8" id="y0b-Jo-ZjK"/>
                                 <constraint firstItem="2w8-Fl-QQs" firstAttribute="leading" secondItem="uEc-iz-6g5" secondAttribute="leading" id="yK4-ng-At4"/>
                             </constraints>
                         </view>

@@ -28,6 +28,7 @@
 		446C7A4C1CB653300016604B /* IssueMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C7A4A1CB653300016604B /* IssueMainViewController.xib */; };
 		4499E5991CC3D6A200C2E938 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4499E5981CC3D6A200C2E938 /* CommentCell.xib */; };
 		4499E59B1CC4693300C2E938 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4499E59A1CC4693300C2E938 /* CommentCell.swift */; };
+		4499E59D1CC50D5D00C2E938 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4499E59C1CC50D5D00C2E938 /* Vote.swift */; };
 		44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D9931C1CB7A6A500BB771C /* ParserClient.swift */; };
 		7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714869791CC0D2010047BE86 /* IssueListViewController.swift */; };
 		7148697C1CC0D2010047BE86 /* IssueListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7148697A1CC0D2010047BE86 /* IssueListViewController.xib */; };
@@ -85,6 +86,7 @@
 		446C7A4A1CB653300016604B /* IssueMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueMainViewController.xib; path = ViewControllers/Xibs/IssueMainViewController.xib; sourceTree = "<group>"; };
 		4499E5981CC3D6A200C2E938 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentCell.xib; path = Views/CommentCell.xib; sourceTree = "<group>"; };
 		4499E59A1CC4693300C2E938 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = Views/CommentCell.swift; sourceTree = "<group>"; };
+		4499E59C1CC50D5D00C2E938 /* Vote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vote.swift; path = Models/Vote.swift; sourceTree = "<group>"; };
 		44D9931C1CB7A6A500BB771C /* ParserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParserClient.swift; path = Utils/ParserClient.swift; sourceTree = "<group>"; };
 		45E2CB7BF6C25A06526CF36D /* Pods-ScoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutTests/Pods-ScoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		714869791CC0D2010047BE86 /* IssueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueListViewController.swift; path = ViewControllers/IssueListViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				B81BF2E11CB5711F002A5EF4 /* Photo.swift */,
 				44254DD51CB74F7800B384E3 /* PrivateConfig.swift */,
 				B81BF2DD1CB5702E002A5EF4 /* User.swift */,
+				4499E59C1CC50D5D00C2E938 /* Vote.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				446C7A471CB64C760016604B /* MainViewController.swift in Sources */,
 				44D9931D1CB7A6A500BB771C /* ParserClient.swift in Sources */,
 				446C7A1F1CB646570016604B /* WelcomeViewController.swift in Sources */,
+				4499E59D1CC50D5D00C2E938 /* Vote.swift in Sources */,
 				7148697E1CC0E4000047BE86 /* ResponseJSONObjectSerializable.swift in Sources */,
 				446C7A3F1CB647E40016604B /* ProfileHomeViewController.swift in Sources */,
 				446C7A3B1CB647B40016604B /* IssueSubmitViewController.swift in Sources */,

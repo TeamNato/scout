@@ -22,5 +22,6 @@ class ParserClient: NSObject {
     Issue.registerSubclass()
     Photo.registerSubclass()
     User.registerSubclass()
+    Vote.registerSubclass()
   }
 }

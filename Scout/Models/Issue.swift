@@ -49,4 +49,33 @@ class Issue: PFObject, PFSubclassing {
       
     }
   }
+  
+  func isVotedByUser(user: PFUser, callback: (Bool) -> Void) -> Void {
+    let query = PFQuery(className: PF_VOTE_CLASS_NAME)
+    query.whereKey("user", equalTo: user)
+    query.whereKey("issue", equalTo: self)
+    query.countObjectsInBackgroundWithBlock { (count, error) in
+      callback(count > 0)
+    }
+  }
+  
+  func updateVoteStatus(isVoted: Bool, user: PFUser, callback: () -> Void) -> Void {
+    if isVoted {
+      let pfVote = PFObject(className: "Vote")
+      pfVote["user"] = user
+      pfVote["issue"] = self
+      pfVote.saveInBackground()
+      callback()
+    } else {
+      let query = PFQuery(className: PF_VOTE_CLASS_NAME)
+      query.whereKey("user", equalTo: user)
+      query.whereKey("issue", equalTo: self)
+      query.getFirstObjectInBackgroundWithBlock({ (obj, error) in
+        if let obj = obj {
+          obj.deleteInBackground()
+          callback()
+        }
+      })
+    }
+  }
 }

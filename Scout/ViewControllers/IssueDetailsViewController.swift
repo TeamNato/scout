@@ -9,6 +9,7 @@
 import UIKit
 import ImageSlideshow
 import GoogleMaps
+import FontAwesome_swift
 
 class IssueDetailsViewController: UIViewController {
   var issue: Issue?
@@ -26,7 +27,9 @@ class IssueDetailsViewController: UIViewController {
   @IBOutlet weak var keyboardHeight: NSLayoutConstraint!
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var contentView: UIView!
+  @IBOutlet weak var voteButton: UIButton!
   
+  var isVoted = false
   var comments: [Comment]?
   
   var transitionDelegate: ZoomAnimatedTransitioningDelegate?
@@ -77,9 +80,9 @@ class IssueDetailsViewController: UIViewController {
       marker.map = locationMap
       
       setupCommentsTable()
+      getComments()
+      setupVoteButton()
     }
-    
-    getComments()
   }
   
   func dismissKeyboard() {
@@ -99,6 +102,29 @@ class IssueDetailsViewController: UIViewController {
     UIView.animateWithDuration(0.1, animations: { () -> Void in
       self.keyboardHeight.constant = 0
     })
+  }
+  
+  func setupVoteButton() {
+    voteButton.titleLabel?.font = UIFont.fontAwesomeOfSize(24)
+    issue?.isVotedByUser(PFUser.currentUser()!, callback: { (isVoted) in
+      self.setVoteButtonState(isVoted)
+    })
+  }
+  
+  func setVoteButtonState(isVoted: Bool) -> Void {
+    self.isVoted = isVoted
+
+    if (isVoted) {
+      voteButton.setTitle("", forState: .Normal) // fa-check-circle
+    } else {
+      voteButton.setTitle("", forState: .Normal) // fa-check-circle-o
+    }
+  }
+  
+  @IBAction func onVoteTapped(sender: UIButton) {
+    issue!.updateVoteStatus(!isVoted, user: PFUser.currentUser()!) { 
+      self.setVoteButtonState(!self.isVoted)
+    }
   }
   
   func getComments() {

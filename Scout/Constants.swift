@@ -61,3 +61,7 @@ let PF_COMMENT_USER             = "user"
 let PF_COMMENT_ISSUE            = "issue"
 let PF_COMMENT_MESSAGE          = "message"
 
+/* Vote */
+let PF_VOTE_CLASS_NAME       = "Vote"
+let PF_VOTE_USER             = "user"
+let PF_VOTE_ISSUE            = "issue"
