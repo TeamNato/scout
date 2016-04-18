@@ -52,7 +52,7 @@ class IssueDetailsViewController: UIViewController {
       }
       
       titleLabel.text = issue.title
-      //descriptionLabel.text = issue.objectForKey("description") as? String
+      descriptionLabel.text = issue.objectForKey("description") as? String
       
       userLabel.text = issue.reporter.fullName()
       userImage.af_setImageWithURL(NSURL(string: issue.reporter.avatarURL)!)
