@@ -205,21 +205,15 @@
                 <constraint firstItem="SNp-BM-Ywx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GK4-dL-nSM"/>
                 <constraint firstAttribute="bottom" secondItem="CcN-8c-gXZ" secondAttribute="bottom" id="LGy-CA-CjJ"/>
                 <constraint firstItem="SNp-BM-Ywx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MA2-hz-kqe"/>
-                <constraint firstItem="uEc-iz-6g5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="N60-yI-v95"/>
                 <constraint firstItem="CcN-8c-gXZ" firstAttribute="top" secondItem="5gB-Ba-KZC" secondAttribute="bottom" id="Yo3-k1-aMG"/>
+                <constraint firstItem="uEc-iz-6g5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="bWu-Ur-fa8"/>
                 <constraint firstAttribute="trailing" secondItem="SNp-BM-Ywx" secondAttribute="trailing" id="bst-Ig-rZn"/>
                 <constraint firstItem="5gB-Ba-KZC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dbT-LH-fJW"/>
                 <constraint firstItem="5gB-Ba-KZC" firstAttribute="top" secondItem="SNp-BM-Ywx" secondAttribute="bottom" id="deG-6W-H3n"/>
-                <constraint firstAttribute="bottom" secondItem="5gB-Ba-KZC" secondAttribute="bottom" constant="8" id="n27-Z6-3Rn"/>
                 <constraint firstAttribute="trailing" secondItem="5gB-Ba-KZC" secondAttribute="trailing" id="pfJ-Wv-Uwv"/>
                 <constraint firstAttribute="trailing" secondItem="CcN-8c-gXZ" secondAttribute="trailing" id="ynF-OF-X1I"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="n27-Z6-3Rn"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="139.5" y="453.5"/>
         </view>
     </objects>
