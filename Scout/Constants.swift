@@ -55,3 +55,13 @@ let PF_PHOTO_CLASS_NAME         = "Photo"
 let PF_PHOTO_OBJECTID           = "objectId"
 let PF_PHOTO_URL                = "url"
 
+/* Comment */
+let PF_COMMENT_CLASS_NAME       = "Comment"
+let PF_COMMENT_USER             = "user"
+let PF_COMMENT_ISSUE            = "issue"
+let PF_COMMENT_MESSAGE          = "message"
+
+/* Vote */
+let PF_VOTE_CLASS_NAME       = "Vote"
+let PF_VOTE_USER             = "user"
+let PF_VOTE_ISSUE            = "issue"

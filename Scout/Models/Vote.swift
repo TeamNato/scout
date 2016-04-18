@@ -1,20 +1,19 @@
 //
-//  Comment.swift
+//  Vote.swift
 //  Scout
 //
-//  Created by Hieu Rocker on 4/7/16.
+//  Created by redphx on 4/18/16.
 //  Copyright © 2016 Team Nato. All rights reserved.
 //
 
 import Foundation
 import Parse
 
-class Comment: PFObject, PFSubclassing {
-  @NSManaged var issue: String
+class Vote: PFObject, PFSubclassing {
+  @NSManaged var issue: Issue
   @NSManaged var user: User
-  @NSManaged var message: String
   
   class func parseClassName() -> String {
-    return "Comment"
+    return "Vote"
   }
 }
