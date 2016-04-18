@@ -117,6 +117,7 @@ class IssueDetailsViewController: UIViewController {
     
     pfComment.saveInBackgroundWithBlock { (success, error) in
       self.commentText.text = ""
+      self.commentsTable.setContentOffset(CGPointMake(0, 0), animated: true)
       self.getComments()
     }
   }
