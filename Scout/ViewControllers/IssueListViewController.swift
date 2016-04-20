@@ -33,8 +33,9 @@ class IssueListViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     self.tableView.registerNib(UINib(nibName: "IssueListCell", bundle: nil), forCellReuseIdentifier: "IssueListCell")
-    self.tableView.rowHeight = UITableViewAutomaticDimension
     self.tableView.estimatedRowHeight = 106
+    self.tableView.rowHeight = UITableViewAutomaticDimension
+    
   }
 
   func loadIssues() {
@@ -62,6 +63,9 @@ class IssueListViewController: UIViewController {
         self.tableView.reloadData()
       }
     }
+  }
+  @IBAction func onBackClicked(sender: AnyObject) {
+    dismissViewControllerAnimated(true, completion: nil)
   }
 }
 
