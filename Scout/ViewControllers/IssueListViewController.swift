@@ -20,13 +20,20 @@ class IssueListViewController: UIViewController {
   var dateFormatter = NSDateFormatter()
   var notConnectedBanner: Banner?
   @IBOutlet weak var tableView: UITableView!
-  private var refreshControl = UIRefreshControl()
+  private var refreshControl: UIRefreshControl!
   private var loadingAdditionalIssues = false
   override func viewDidLoad() {
+    
+    
     super.viewDidLoad()
     self.initTableView()
+    
     // Refresh control
-    loadIssues()
+    refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: "refreshIssues", forControlEvents: UIControlEvents.ValueChanged)
+    tableView.insertSubview(refreshControl, atIndex: 0)
+    refreshIssues()
+
   }
 
   func initTableView() {
@@ -36,6 +43,9 @@ class IssueListViewController: UIViewController {
     self.tableView.estimatedRowHeight = 106
     self.tableView.rowHeight = UITableViewAutomaticDimension
     
+  }
+  func refreshIssues() {
+    loadIssues()
   }
 
   func loadIssues() {
@@ -61,7 +71,12 @@ class IssueListViewController: UIViewController {
           print("Error: \(error!) \(error!.userInfo)")
         }
         self.tableView.reloadData()
+        
       }
+      
+    }
+    if self.refreshControl.refreshing {
+      self.refreshControl.endRefreshing()
     }
   }
   @IBAction func onBackClicked(sender: AnyObject) {
