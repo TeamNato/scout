@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Circular_Air-Bold.ttf">
+            <string>CircularAir-Bold</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Scout" customModuleProvider="target">
             <connections>
@@ -15,15 +20,34 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wB-xA-BSm">
-                    <rect key="frame" x="123" y="42" width="129" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg" translatesAutoresizingMaskIntoConstraints="NO" id="sNs-Sw-1TI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="413"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="413" id="bor-Qa-lI1"/>
+                        <constraint firstAttribute="height" constant="413" id="shy-hB-66H"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="shy-hB-66H"/>
+                        </mask>
+                    </variation>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urn-MI-96D">
-                    <rect key="frame" x="166" y="319" width="42" height="30"/>
-                    <state key="normal" title="Log in"/>
+                    <rect key="frame" x="10" y="493" width="352" height="49"/>
+                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="9Sr-pa-wjQ"/>
+                        <constraint firstAttribute="height" constant="49" id="Ihc-lv-a2O"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CircularAir-Bold" family="Circular Air" pointSize="20"/>
+                    <state key="normal" title="Facebook">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ihc-lv-a2O"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="onLogInClicked:" destination="-1" eventType="touchUpInside" id="ia1-XZ-Yxj"/>
                     </connections>
@@ -31,10 +55,33 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Urn-MI-96D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="C08-GB-0cJ"/>
+                <constraint firstAttribute="trailing" secondItem="sNs-Sw-1TI" secondAttribute="trailing" id="Di9-Pf-wuo"/>
+                <constraint firstItem="sNs-Sw-1TI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HHh-oV-byQ"/>
+                <constraint firstItem="Urn-MI-96D" firstAttribute="top" secondItem="sNs-Sw-1TI" secondAttribute="bottom" constant="80" id="RB2-J2-9s2"/>
+                <constraint firstItem="Urn-MI-96D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Va0-zV-iJf"/>
+                <constraint firstItem="sNs-Sw-1TI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YgH-un-YBg"/>
+                <constraint firstAttribute="trailing" secondItem="Urn-MI-96D" secondAttribute="trailing" constant="13" id="ZmS-NV-6o1"/>
+                <constraint firstAttribute="trailing" secondItem="Urn-MI-96D" secondAttribute="trailing" constant="13" id="aNO-qs-QZz"/>
+                <constraint firstItem="sNs-Sw-1TI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cLy-Dc-ukS"/>
+                <constraint firstItem="Urn-MI-96D" firstAttribute="top" secondItem="sNs-Sw-1TI" secondAttribute="bottom" constant="80" id="jVW-LP-xC6"/>
                 <constraint firstItem="Urn-MI-96D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oG8-Nx-gLk"/>
                 <constraint firstItem="Urn-MI-96D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yzc-p2-RBZ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="HHh-oV-byQ"/>
+                    <exclude reference="C08-GB-0cJ"/>
+                    <exclude reference="aNO-qs-QZz"/>
+                    <exclude reference="jVW-LP-xC6"/>
+                    <exclude reference="oG8-Nx-gLk"/>
+                    <exclude reference="yzc-p2-RBZ"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="login-bg" width="295" height="361"/>
+    </resources>
 </document>
