@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>scout-icon.ttf</string>
 		<string>Circular_Air-Book.ttf</string>
 		<string>Circular_Air-Bold.ttf</string>
 		<string>Circular_Air-Light.ttf</string>

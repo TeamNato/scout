@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,8 +14,28 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swf-CU-Rd9">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Filter" id="7xC-5G-fV2">
+                            <barButtonItem key="leftBarButtonItem" image="btn-back" id="l9w-c6-HK4"/>
+                            <barButtonItem key="rightBarButtonItem" image="icon-checked" id="HWe-st-J4d"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Swf-CU-Rd9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="2NY-mr-Lb5"/>
+                <constraint firstItem="Swf-CU-Rd9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eLQ-A4-WDq"/>
+                <constraint firstAttribute="trailing" secondItem="Swf-CU-Rd9" secondAttribute="trailing" id="oFb-gE-8y5"/>
+            </constraints>
             <point key="canvasLocation" x="408" y="283"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn-back" width="22" height="32"/>
+        <image name="icon-checked" width="21" height="21"/>
+    </resources>
 </document>

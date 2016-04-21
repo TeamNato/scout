@@ -35,6 +35,7 @@
 		717051811CC8A14B008891EF /* Circular_Air-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7170517E1CC8A14B008891EF /* Circular_Air-Book.ttf */; };
 		717051821CC8A14B008891EF /* Circular_Air-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7170517F1CC8A14B008891EF /* Circular_Air-Bold.ttf */; };
 		717051841CC8AD98008891EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717051831CC8AD98008891EF /* Assets.xcassets */; };
+		717051861CC8BB7D008891EF /* scout-icon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 717051851CC8BB7C008891EF /* scout-icon.ttf */; };
 		7558C1821CC33EF4004E2712 /* IssueFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558C1801CC33EF4004E2712 /* IssueFilterViewController.swift */; };
 		7558C1831CC33EF4004E2712 /* IssueFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7558C1811CC33EF4004E2712 /* IssueFilterViewController.xib */; };
 		75E1A16A1CC39BE5009B1246 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E1A1691CC39BE5009B1246 /* Region.swift */; };
@@ -98,6 +99,7 @@
 		7170517E1CC8A14B008891EF /* Circular_Air-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Circular_Air-Book.ttf"; path = "../../../Desktop/scout/Circular_Air-Book.ttf"; sourceTree = "<group>"; };
 		7170517F1CC8A14B008891EF /* Circular_Air-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Circular_Air-Bold.ttf"; path = "../../../Desktop/scout/Circular_Air-Bold.ttf"; sourceTree = "<group>"; };
 		717051831CC8AD98008891EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		717051851CC8BB7C008891EF /* scout-icon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "scout-icon.ttf"; path = "../../../Desktop/scout/scout-icon.ttf"; sourceTree = "<group>"; };
 		7558C1801CC33EF4004E2712 /* IssueFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueFilterViewController.swift; path = ViewControllers/IssueFilter/IssueFilterViewController.swift; sourceTree = "<group>"; };
 		7558C1811CC33EF4004E2712 /* IssueFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueFilterViewController.xib; path = ViewControllers/IssueFilter/IssueFilterViewController.xib; sourceTree = "<group>"; };
 		75E1A1691CC39BE5009B1246 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Region.swift; path = Models/Region.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		7170517C1CC8A103008891EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				717051851CC8BB7C008891EF /* scout-icon.ttf */,
 				7170517D1CC8A14B008891EF /* Circular_Air-Light.ttf */,
 				7170517E1CC8A14B008891EF /* Circular_Air-Book.ttf */,
 				7170517F1CC8A14B008891EF /* Circular_Air-Bold.ttf */,
@@ -422,6 +425,7 @@
 				717051841CC8AD98008891EF /* Assets.xcassets in Resources */,
 				446C7A481CB64C760016604B /* MainViewController.xib in Resources */,
 				4499E5991CC3D6A200C2E938 /* CommentCell.xib in Resources */,
+				717051861CC8BB7D008891EF /* scout-icon.ttf in Resources */,
 				B8F119FD1CB5696B004359DD /* LaunchScreen.storyboard in Resources */,
 				B829CAB31CB7A951008CC54F /* PrivateConfig.plist in Resources */,
 				717051821CC8A14B008891EF /* Circular_Air-Bold.ttf in Resources */,

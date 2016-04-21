@@ -91,6 +91,9 @@ extension IssueListViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier("IssueListCell") as! IssueListCell
     let issue = issues[indexPath.row]
     cell.issue = issue
+    cell.preservesSuperviewLayoutMargins = false
+    cell.separatorInset = UIEdgeInsetsZero
+    cell.layoutMargins = UIEdgeInsetsZero
     
     return cell
   }

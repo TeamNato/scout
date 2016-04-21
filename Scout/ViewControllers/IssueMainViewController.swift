@@ -10,39 +10,37 @@ import UIKit
 import GoogleMaps
 class IssueMainViewController: UIViewController {
   
-  var mapview: GMSMapView?
-  let locationManager = CLLocationManager()
   
+  @IBOutlet weak var mainMapView: UIView!
+  let cllocationManager: CLLocationManager = CLLocationManager()
+  let locationManager = CLLocationManager()
+  var googleMaps: GMSMapView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    locationManager.delegate = self
-    locationManager.requestWhenInUseAuthorization()
     
-    let camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 10.7807514, longitude: 106.7043346), zoom: 17, bearing: 0, viewingAngle: 0)
+    //Request for location authorization
+    //Request location authorization
+    self.cllocationManager.requestAlwaysAuthorization()
+    self.cllocationManager.requestWhenInUseAuthorization()
     
-    mapview = GMSMapView(frame: CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - super.tabBarController!.tabBar.bounds.height - 64))
-    
-    mapview!.camera = camera
-    mapview!.myLocationEnabled = true
-    mapview!.settings.myLocationButton = true
-    mapview!.settings.compassButton = true
-    self.view.addSubview(mapview!)
-    
-    let marker = GMSMarker()
-    marker.position = CLLocationCoordinate2DMake(10.7807514, 106.7043346)
-    marker.title = "Ngo Van Nam"
-    marker.snippet = "Description"
-    marker.map = mapview
-    
+    if CLLocationManager.locationServicesEnabled() {
+      cllocationManager.desiredAccuracy = kCLLocationAccuracyBest
+      cllocationManager.startUpdatingLocation()
+    }
     // Do any additional setup after loading the view.
   }
+  //Add Google Maps to the view
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(true)
+    self.googleMaps = GMSMapView(frame: self.view.frame)
+    self.view.addSubview(self.googleMaps)
+  }
+  
   
   func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
     if status == CLAuthorizationStatus.AuthorizedWhenInUse {
       locationManager.startUpdatingLocation()
-      mapview!.myLocationEnabled = true
-      mapview!.settings.myLocationButton = true
     }
   }
 
@@ -69,6 +67,4 @@ class IssueMainViewController: UIViewController {
   }
 }
 extension IssueMainViewController: CLLocationManagerDelegate {
-}
-extension IssueMainViewController: GMSMapViewDelegate {
 }
