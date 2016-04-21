@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,34 +16,81 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zha-Ys-4HH">
-                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="64" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zha-Ys-4HH">
+                    <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="bubble_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="mGV-ek-ars">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="CircularAir-Book" family="Circular Air" pointSize="17"/>
+                        <color key="textColor" red="0.33725490196078434" green="0.3529411764705882" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                    </textAttributes>
                     <items>
-                        <navigationItem title="Issue Detail" id="QuX-pA-bTN">
-                            <barButtonItem key="leftBarButtonItem" title="Back" id="XNl-PQ-xwp">
+                        <navigationItem title="Issues" id="QuX-pA-bTN">
+                            <barButtonItem key="leftBarButtonItem" image="btn-back" id="XNl-PQ-xwp">
+                                <color key="tintColor" red="1" green="0.35294117650000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onBackClicked:" destination="-1" id="Ps7-FR-T3N"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" image="icon-map" id="OdK-Le-aOh">
+                                <color key="tintColor" red="1" green="0.3529411764705882" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUs-9Z-gKf">
+                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <items>
+                        <tabBarItem title="" image="tab-icon-home" id="iYU-EZ-uP4" userLabel="Home">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        </tabBarItem>
+                        <tabBarItem image="tab-icon-list" id="sQ8-cC-RFm" userLabel="Collections">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        </tabBarItem>
+                        <tabBarItem title="" image="tab-plus-icon" id="hZZ-gj-gkV" userLabel="Add">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        </tabBarItem>
+                        <tabBarItem image="tab-icon-user" id="u6Y-uw-cdg" userLabel="Acount">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        </tabBarItem>
+                    </items>
+                    <color key="tintColor" red="1" green="0.35294117650000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </tabBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="zha-Ys-4HH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DPc-fk-DYx"/>
-                <constraint firstAttribute="bottom" secondItem="zha-Ys-4HH" secondAttribute="bottom" id="OTo-xu-3fD"/>
+                <constraint firstAttribute="bottom" secondItem="zha-Ys-4HH" secondAttribute="bottom" constant="49" id="OTo-xu-3fD"/>
                 <constraint firstAttribute="trailing" secondItem="zha-Ys-4HH" secondAttribute="trailing" id="YJB-LV-hpU"/>
-                <constraint firstItem="zha-Ys-4HH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="tDt-64-jyL"/>
+                <constraint firstAttribute="bottom" secondItem="iUs-9Z-gKf" secondAttribute="bottom" id="ZUb-wl-al5"/>
+                <constraint firstAttribute="trailing" secondItem="iUs-9Z-gKf" secondAttribute="trailing" id="e8w-f6-YVe"/>
+                <constraint firstItem="iUs-9Z-gKf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eCC-EJ-RcJ"/>
+                <constraint firstItem="zha-Ys-4HH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="tDt-64-jyL"/>
             </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <point key="canvasLocation" x="682" y="315"/>
+        </view>
+        <view contentMode="scaleToFill" id="u9B-so-qD4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="294" y="383"/>
         </view>
     </objects>
     <resources>
+        <image name="btn-back" width="22" height="32"/>
         <image name="bubble_left.png" width="31" height="55"/>
+        <image name="icon-map" width="22" height="32"/>
+        <image name="tab-icon-home" width="32" height="32"/>
+        <image name="tab-icon-list" width="25" height="25"/>
+        <image name="tab-icon-user" width="32" height="32"/>
+        <image name="tab-plus-icon" width="25" height="25"/>
     </resources>
 </document>

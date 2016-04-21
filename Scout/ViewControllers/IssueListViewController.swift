@@ -82,6 +82,7 @@ class IssueListViewController: UIViewController {
   @IBAction func onBackClicked(sender: AnyObject) {
     dismissViewControllerAnimated(true, completion: nil)
   }
+  
 }
 
 // MARK: - UITableViewDataSource

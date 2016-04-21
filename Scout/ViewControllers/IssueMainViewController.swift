@@ -21,7 +21,7 @@ class IssueMainViewController: UIViewController {
     
     let camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 10.7807514, longitude: 106.7043346), zoom: 17, bearing: 0, viewingAngle: 0)
     
-    mapview = GMSMapView(frame: CGRectMake(0, 45, self.view.bounds.width, self.view.bounds.height - super.tabBarController!.tabBar.bounds.height - 20))
+    mapview = GMSMapView(frame: CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - super.tabBarController!.tabBar.bounds.height - 64))
     
     mapview!.camera = camera
     mapview!.myLocationEnabled = true
