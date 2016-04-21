@@ -29,6 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     window?.rootViewController = vc
+    UINavigationBar.appearance().titleTextAttributes = [
+      NSFontAttributeName: UIFont(name: "CircularAir-Book", size: 17)!
+    ]
+    UINavigationBar.appearance().tintColor = UIColor(red:1.00, green:0.35, blue:0.37, alpha:1.0)
+   
+
     return true
   }
   

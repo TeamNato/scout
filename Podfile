@@ -1,4 +1,4 @@
-# Uncomment this line to define a global platform for your project
+   # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
@@ -20,6 +20,7 @@ target 'Scout' do
   pod 'FBSDKCoreKit', '4.10.1'
   pod 'FBSDKLoginKit', '4.10.1'
   pod 'BRYXBanner'
+  pod 'Eureka'
   pod 'ImageSlideshow', '0.4.0'
   pod 'ImageSlideshow/Alamofire', '0.4.0'
   shared_pods

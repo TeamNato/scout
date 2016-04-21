@@ -4,79 +4,122 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Circular_Air-Book.ttf">
+            <string>CircularAir-Book</string>
+            <string>CircularAir-Book</string>
+            <string>CircularAir-Book</string>
+        </mutableArray>
+        <mutableArray key="scout-icon.ttf">
+            <string>airglyphs</string>
+            <string>airglyphs</string>
+            <string>airglyphs</string>
+            <string>airglyphs</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="107" id="KGk-i7-Jjw" customClass="IssueListCell" customModule="Scout" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="379" height="107"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="214" id="KGk-i7-Jjw" customClass="IssueListCell" customModule="Scout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="214"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="379" height="106"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="213"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fresh District" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3T-vb-uXN">
-                        <rect key="frame" x="98" y="12" width="94" height="17"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traffic lights Traffic lights Traffic lights Traffic lights Traffic lights Traffic lights " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3T-vb-uXN">
+                        <rect key="frame" x="96" y="12" width="324" height="41"/>
+                        <fontDescription key="fontDescription" name="CircularAir-Book" family="Circular Air" pointSize="16"/>
+                        <color key="textColor" red="0.33725490196078434" green="0.3529411764705882" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="33177 Danielle Station" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-ll-1Gq">
-                        <rect key="frame" x="98" y="34" width="145" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Checked-50" translatesAutoresizingMaskIntoConstraints="NO" id="9yS-RH-Ild">
-                        <rect key="frame" x="98" y="71" width="25" height="25"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvk-0j-xyG">
-                        <rect key="frame" x="131" y="75" width="9" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Speech Bubble-50" translatesAutoresizingMaskIntoConstraints="NO" id="9ju-Sy-amI">
-                        <rect key="frame" x="180" y="71" width="25" height="25"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-Go-VZ0">
-                        <rect key="frame" x="207" y="75" width="9" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="issue" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-OW-aPS">
-                        <rect key="frame" x="8" y="12" width="80" height="294"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="issue-image" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-OW-aPS">
+                        <rect key="frame" x="8" y="12" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="IiV-oX-Ssq"/>
-                            <constraint firstAttribute="height" constant="80" id="tMn-a3-Ote"/>
+                            <constraint firstAttribute="height" constant="80" id="0Tc-5c-8tZ"/>
+                            <constraint firstAttribute="width" constant="80" id="zjR-DN-oXq"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.5 km" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92d-3g-gcf">
-                        <rect key="frame" x="202" y="12" width="169" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33177 Danielle Station" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-ll-1Gq">
+                        <rect key="frame" x="120" y="63" width="142" height="20"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                        <color key="textColor" red="0.50980392156862742" green="0.53333333333333333" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-wo-JrF">
+                        <rect key="frame" x="96" y="86" width="16" height="22"/>
+                        <fontDescription key="fontDescription" name="airglyphs" family="airglyphs" pointSize="17"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.53333333329999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5 km" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92d-3g-gcf">
+                        <rect key="frame" x="443" y="12" width="44" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.33725490200000002" green="0.35294117650000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-C6-ArB">
+                        <rect key="frame" x="96" y="58" width="16" height="22"/>
+                        <fontDescription key="fontDescription" name="airglyphs" family="airglyphs" pointSize="17"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.53333333329999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 days ago, by" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfg-8D-NBB">
+                        <rect key="frame" x="118" y="91" width="92" height="20"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.53333333329999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvk-0j-xyG">
+                        <rect key="frame" x="118" y="121" width="18" height="18"/>
+                        <fontDescription key="fontDescription" name="CircularAir-Book" family="Circular Air" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.35294117650000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-TQ-sb1">
+                        <rect key="frame" x="144" y="118" width="13" height="19"/>
+                        <fontDescription key="fontDescription" name="airglyphs" family="airglyphs" pointSize="14"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.53333333329999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKW-OW-Muh">
+                        <rect key="frame" x="96" y="114" width="16" height="87"/>
+                        <fontDescription key="fontDescription" name="airglyphs" family="airglyphs" pointSize="17"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.53333333329999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEg-Go-VZ0">
+                        <rect key="frame" x="163" y="121" width="15" height="18"/>
+                        <fontDescription key="fontDescription" name="CircularAir-Book" family="Circular Air" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.35294117650000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WEg-Go-VZ0" firstAttribute="leading" secondItem="9ju-Sy-amI" secondAttribute="trailing" constant="2" id="1Ty-lb-TRU"/>
-                    <constraint firstItem="Ht6-ll-1Gq" firstAttribute="top" secondItem="F3T-vb-uXN" secondAttribute="bottom" constant="5" id="2Jj-bT-ffw"/>
-                    <constraint firstItem="Ht6-ll-1Gq" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="10" id="4ej-0A-yKk"/>
-                    <constraint firstAttribute="trailing" secondItem="92d-3g-gcf" secondAttribute="trailing" constant="8" id="6jN-UO-3K0"/>
-                    <constraint firstItem="1DS-OW-aPS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="EUc-OG-1NZ"/>
-                    <constraint firstItem="92d-3g-gcf" firstAttribute="centerY" secondItem="F3T-vb-uXN" secondAttribute="centerY" id="FEe-D4-PAg"/>
-                    <constraint firstItem="F3T-vb-uXN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="LWe-yn-KC0"/>
-                    <constraint firstItem="92d-3g-gcf" firstAttribute="leading" secondItem="F3T-vb-uXN" secondAttribute="trailing" constant="10" id="VN0-TT-gjT"/>
-                    <constraint firstItem="9ju-Sy-amI" firstAttribute="top" secondItem="Ht6-ll-1Gq" secondAttribute="bottom" constant="20" id="b2n-JI-HVD"/>
-                    <constraint firstItem="F3T-vb-uXN" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="10" id="bhR-r2-tg6"/>
-                    <constraint firstItem="dvk-0j-xyG" firstAttribute="leading" secondItem="9yS-RH-Ild" secondAttribute="trailing" constant="8" id="dEB-0U-LLT"/>
-                    <constraint firstItem="9yS-RH-Ild" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="10" id="fQ6-Pq-T9f"/>
-                    <constraint firstItem="WEg-Go-VZ0" firstAttribute="centerY" secondItem="9ju-Sy-amI" secondAttribute="centerY" id="g7a-tz-G6i"/>
-                    <constraint firstItem="1DS-OW-aPS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lBj-Za-LMA"/>
-                    <constraint firstItem="dvk-0j-xyG" firstAttribute="centerY" secondItem="9yS-RH-Ild" secondAttribute="centerY" id="lue-gI-YrK"/>
-                    <constraint firstItem="9yS-RH-Ild" firstAttribute="top" secondItem="Ht6-ll-1Gq" secondAttribute="bottom" constant="20" id="mh1-Wr-Lbj"/>
-                    <constraint firstAttribute="bottom" secondItem="1DS-OW-aPS" secondAttribute="bottom" constant="10" id="nOR-kW-J6l"/>
-                    <constraint firstItem="9ju-Sy-amI" firstAttribute="leading" secondItem="dvk-0j-xyG" secondAttribute="trailing" constant="40" id="yOf-ml-3jP"/>
+                    <constraint firstItem="UKz-TQ-sb1" firstAttribute="top" secondItem="nfg-8D-NBB" secondAttribute="bottom" constant="7" id="3dy-e2-dWx"/>
+                    <constraint firstItem="PKW-OW-Muh" firstAttribute="top" secondItem="nfg-8D-NBB" secondAttribute="bottom" constant="3" id="8az-8A-22m"/>
+                    <constraint firstItem="UKz-TQ-sb1" firstAttribute="leading" secondItem="dvk-0j-xyG" secondAttribute="trailing" constant="8" id="Cw6-Se-hGS"/>
+                    <constraint firstItem="dvk-0j-xyG" firstAttribute="leading" secondItem="PKW-OW-Muh" secondAttribute="trailing" constant="6" id="D6A-li-fbN"/>
+                    <constraint firstItem="SFa-C6-ArB" firstAttribute="top" secondItem="F3T-vb-uXN" secondAttribute="bottom" constant="5" id="LyA-bs-w41"/>
+                    <constraint firstItem="Ht6-ll-1Gq" firstAttribute="leading" secondItem="SFa-C6-ArB" secondAttribute="trailing" constant="8" id="MfM-RO-4Le"/>
+                    <constraint firstItem="fWW-wo-JrF" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="8" id="Mo2-do-snG"/>
+                    <constraint firstItem="WEg-Go-VZ0" firstAttribute="leading" secondItem="UKz-TQ-sb1" secondAttribute="trailing" constant="6" id="Ofp-xI-dgh"/>
+                    <constraint firstItem="nfg-8D-NBB" firstAttribute="leading" secondItem="fWW-wo-JrF" secondAttribute="trailing" constant="6" id="PUf-zB-9MV"/>
+                    <constraint firstItem="92d-3g-gcf" firstAttribute="top" secondItem="1DS-OW-aPS" secondAttribute="top" id="QpW-Ic-iXh"/>
+                    <constraint firstItem="nfg-8D-NBB" firstAttribute="top" secondItem="Ht6-ll-1Gq" secondAttribute="bottom" constant="8" id="UM8-Ml-sqT"/>
+                    <constraint firstItem="SFa-C6-ArB" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="8" id="Ynu-9D-v6W"/>
+                    <constraint firstItem="dvk-0j-xyG" firstAttribute="top" secondItem="nfg-8D-NBB" secondAttribute="bottom" constant="10" id="ag9-OK-jmr"/>
+                    <constraint firstItem="F3T-vb-uXN" firstAttribute="top" secondItem="1DS-OW-aPS" secondAttribute="top" id="c5o-BS-DAv"/>
+                    <constraint firstItem="F3T-vb-uXN" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="8" id="cxb-Ad-Q7R"/>
+                    <constraint firstItem="1DS-OW-aPS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="eMZ-6g-zdT"/>
+                    <constraint firstAttribute="bottom" secondItem="PKW-OW-Muh" secondAttribute="bottom" constant="12" id="fsl-5f-or2"/>
+                    <constraint firstItem="WEg-Go-VZ0" firstAttribute="top" secondItem="nfg-8D-NBB" secondAttribute="bottom" constant="10" id="mzr-7S-Jfk"/>
+                    <constraint firstItem="fWW-wo-JrF" firstAttribute="top" secondItem="Ht6-ll-1Gq" secondAttribute="bottom" constant="3" id="n7B-bb-nF0"/>
+                    <constraint firstItem="1DS-OW-aPS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="nJc-2t-BMe"/>
+                    <constraint firstItem="PKW-OW-Muh" firstAttribute="leading" secondItem="1DS-OW-aPS" secondAttribute="trailing" constant="8" id="nnf-mz-PdF"/>
+                    <constraint firstAttribute="trailing" secondItem="92d-3g-gcf" secondAttribute="trailing" constant="8" id="rSS-ql-42W"/>
+                    <constraint firstItem="Ht6-ll-1Gq" firstAttribute="top" secondItem="F3T-vb-uXN" secondAttribute="bottom" constant="10" id="rbV-NS-jbq"/>
+                    <constraint firstAttribute="trailing" secondItem="F3T-vb-uXN" secondAttribute="trailing" constant="75" id="tRN-q1-Sx9"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -87,12 +130,10 @@
                 <outlet property="titleLabel" destination="F3T-vb-uXN" id="Xk2-YE-5gb"/>
                 <outlet property="voteLabel" destination="dvk-0j-xyG" id="TXJ-Mx-qJh"/>
             </connections>
-            <point key="canvasLocation" x="551.5" y="493.5"/>
+            <point key="canvasLocation" x="394.5" y="412"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Checked-50" width="25" height="25"/>
-        <image name="Speech Bubble-50" width="25" height="25"/>
-        <image name="issue" width="490" height="294"/>
+        <image name="issue-image" width="450" height="300"/>
     </resources>
 </document>
