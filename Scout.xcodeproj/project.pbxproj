@@ -36,6 +36,7 @@
 		71BED6D51CC9C5030005A247 /* Circular_Air-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71BED6D11CC9C5030005A247 /* Circular_Air-Book.ttf */; };
 		71BED6D61CC9C5030005A247 /* Circular_Air-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71BED6D21CC9C5030005A247 /* Circular_Air-Light.ttf */; };
 		71BED6D71CC9C5030005A247 /* scout-icon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71BED6D31CC9C5030005A247 /* scout-icon.ttf */; };
+		75039F2F1CCCA3B5007AEA0D /* PlaceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75039F2E1CCCA3B5007AEA0D /* PlaceMaker.swift */; };
 		7558C1821CC33EF4004E2712 /* IssueFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558C1801CC33EF4004E2712 /* IssueFilterViewController.swift */; };
 		7558C1831CC33EF4004E2712 /* IssueFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7558C1811CC33EF4004E2712 /* IssueFilterViewController.xib */; };
 		75E1A16A1CC39BE5009B1246 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E1A1691CC39BE5009B1246 /* Region.swift */; };
@@ -100,6 +101,7 @@
 		71BED6D11CC9C5030005A247 /* Circular_Air-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular_Air-Book.ttf"; sourceTree = "<group>"; };
 		71BED6D21CC9C5030005A247 /* Circular_Air-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular_Air-Light.ttf"; sourceTree = "<group>"; };
 		71BED6D31CC9C5030005A247 /* scout-icon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scout-icon.ttf"; sourceTree = "<group>"; };
+		75039F2E1CCCA3B5007AEA0D /* PlaceMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceMaker.swift; path = PlaceMaker/PlaceMaker.swift; sourceTree = "<group>"; };
 		7558C1801CC33EF4004E2712 /* IssueFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueFilterViewController.swift; path = ViewControllers/IssueFilter/IssueFilterViewController.swift; sourceTree = "<group>"; };
 		7558C1811CC33EF4004E2712 /* IssueFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IssueFilterViewController.xib; path = ViewControllers/IssueFilter/IssueFilterViewController.xib; sourceTree = "<group>"; };
 		75E1A1691CC39BE5009B1246 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Region.swift; path = Models/Region.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		446C7A151CB614030016604B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				75039F2D1CCCA391007AEA0D /* PlaceMaker */,
 				7558C17B1CC339E0004E2712 /* IssueFilter */,
 				C84CF8551CC21B0400AE9926 /* ListIssue */,
 				442345DA1CBDE546007F3865 /* Xibs */,
@@ -223,6 +226,14 @@
 				71BED6D31CC9C5030005A247 /* scout-icon.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		75039F2D1CCCA391007AEA0D /* PlaceMaker */ = {
+			isa = PBXGroup;
+			children = (
+				75039F2E1CCCA3B5007AEA0D /* PlaceMaker.swift */,
+			);
+			name = PlaceMaker;
 			sourceTree = "<group>";
 		};
 		7558C17B1CC339E0004E2712 /* IssueFilter */ = {
@@ -550,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				446C7A331CB647530016604B /* MoreViewController.swift in Sources */,
+				75039F2F1CCCA3B5007AEA0D /* PlaceMaker.swift in Sources */,
 				7148697B1CC0D2010047BE86 /* IssueListViewController.swift in Sources */,
 				446C7A371CB647690016604B /* IssueDetailsViewController.swift in Sources */,
 				4499E59B1CC4693300C2E938 /* CommentCell.swift in Sources */,

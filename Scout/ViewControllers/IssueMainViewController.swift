@@ -15,7 +15,11 @@ class IssueMainViewController: UIViewController {
   
   let cllocationManager: CLLocationManager = CLLocationManager()
   @IBOutlet weak var addressLabel: UILabel!
+  
+  
   let locationManager = CLLocationManager()
+  let dataProvider = GoogleDataProvider()
+  let searchRadius: Double = 1000
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,8 +37,7 @@ class IssueMainViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     
-    mainMapView.delegate = self
-
+    self.mainMapView.delegate = self
   }
   
   func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
@@ -42,13 +45,32 @@ class IssueMainViewController: UIViewController {
     geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
       if let address = response?.firstResult() {
         print("address")
+        
+        let labelHeight = self.addressLabel.intrinsicContentSize().height
+        self.mainMapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0,
+                                                bottom: labelHeight, right: 0)
         UIView.animateWithDuration(0.25) {
+          
+          self.pinImageVerticalConstraint.constant = ((labelHeight - self.topLayoutGuide) * 0.5)
           self.view.layoutIfNeeded()
         }
+        
       }
     }
   }
-
+  
+  func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
+    mainMapView.clear()
+    dataProvider.fetchPlacesNearbyCoordinate(coordinate, radius:searchRadius, types: searhedTypes) { places in
+      for place: GooglePlace in places {
+        let maker = PlaceMaker(place: place)
+        maker.map = self.mainMapView
+      }
+      
+    }
+    
+  }
+  
   @IBAction func onIssueFilterClicked(sender: AnyObject) {
     let issueFilterVC = IssueFilterViewController(nibName: "IssueFilterViewController", bundle: nil)
     presentViewController(issueFilterVC, animated: true, completion: nil)
@@ -91,10 +113,10 @@ extension IssueMainViewController: CLLocationManagerDelegate {
       locationManager.stopUpdatingLocation()
     }
   }
-  
 }
 extension IssueMainViewController: GMSMapViewDelegate {
   func mainMapView(mainMapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
+    print("xxx")
     reverseGeocodeCoordinate(position.target)
   }
 }

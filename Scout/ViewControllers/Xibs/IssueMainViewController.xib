@@ -59,7 +59,7 @@
                     <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </tabBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-Dx-hMA" customClass="GMSMapView">
-                    <rect key="frame" x="0.0" y="64" width="375" height="557"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                     <color key="backgroundColor" red="0.0" green="0.49803921569999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="indicator" translatesAutoresizingMaskIntoConstraints="NO" id="LZR-na-pio">
@@ -75,7 +75,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ouZ-Dx-hMA" secondAttribute="bottom" constant="46" id="2n6-21-vA0"/>
+                <constraint firstAttribute="bottom" secondItem="ouZ-Dx-hMA" secondAttribute="bottom" constant="49" id="2n6-21-vA0"/>
                 <constraint firstItem="kst-X3-K6g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="628-7r-8tY"/>
                 <constraint firstItem="rjs-t7-alX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6UI-5d-AtP"/>
                 <constraint firstItem="ySa-Pe-dgN" firstAttribute="trailing" secondItem="ouZ-Dx-hMA" secondAttribute="trailing" id="Dxq-Yr-VIh"/>
