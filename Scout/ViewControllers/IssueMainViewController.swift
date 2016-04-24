@@ -7,40 +7,45 @@
 //
 
 import UIKit
+import CoreLocation
 import GoogleMaps
 class IssueMainViewController: UIViewController {
   
+  @IBOutlet weak var mainMapView: GMSMapView!
   
-  @IBOutlet weak var mainMapView: UIView!
   let cllocationManager: CLLocationManager = CLLocationManager()
+  @IBOutlet weak var addressLabel: UILabel!
   let locationManager = CLLocationManager()
-  var googleMaps: GMSMapView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //Request for location authorization
+    
     //Request location authorization
     self.cllocationManager.requestAlwaysAuthorization()
     self.cllocationManager.requestWhenInUseAuthorization()
-    
+    locationManager.delegate = self
+    locationManager.requestWhenInUseAuthorization()
     if CLLocationManager.locationServicesEnabled() {
       cllocationManager.desiredAccuracy = kCLLocationAccuracyBest
       cllocationManager.startUpdatingLocation()
     }
+    
     // Do any additional setup after loading the view.
-  }
-  //Add Google Maps to the view
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(true)
-    self.googleMaps = GMSMapView(frame: self.view.frame)
-    self.view.addSubview(self.googleMaps)
+    
+    mainMapView.delegate = self
+
   }
   
-  
-  func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-    if status == CLAuthorizationStatus.AuthorizedWhenInUse {
-      locationManager.startUpdatingLocation()
+  func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
+    let geocoder = GMSGeocoder()
+    geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+      if let address = response?.firstResult() {
+        print("address")
+        UIView.animateWithDuration(0.25) {
+          self.view.layoutIfNeeded()
+        }
+      }
     }
   }
 
@@ -66,5 +71,30 @@ class IssueMainViewController: UIViewController {
     presentViewController(profileHomeVC, animated: true, completion: nil)
   }
 }
+
 extension IssueMainViewController: CLLocationManagerDelegate {
+  func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    if status == .AuthorizedWhenInUse {
+      locationManager.startUpdatingLocation()
+      // Add map optionals
+      mainMapView.myLocationEnabled = true
+      mainMapView.settings.myLocationButton = true
+      mainMapView.settings.myLocationButton = true
+      
+    }
+  }
+  
+  func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    mainMapView.settings.myLocationButton = true
+    if let location = locations.first {
+      mainMapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+      locationManager.stopUpdatingLocation()
+    }
+  }
+  
+}
+extension IssueMainViewController: GMSMapViewDelegate {
+  func mainMapView(mainMapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
+    reverseGeocodeCoordinate(position.target)
+  }
 }
